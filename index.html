@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AquaSurely</title>
+<title>AquaSurely | Commercial & Industrial RO Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AquaSurely provides customized commercial & industrial RO water purification solutions with wholesale pricing and after-sales support.">
 
 <style>
 /* RESET */
@@ -17,17 +18,17 @@
 /* HEADER */
 header {
   background: #4b2f2f;
-  padding: 15px 30px;
+  padding: 15px 40px;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   align-items: center;
-  list-style: none;
 }
 
 nav ul li {
-  margin-right: 25px;
+  margin-right: 30px;
   position: relative;
 }
 
@@ -51,28 +52,69 @@ nav ul li a {
   padding: 10px 0;
 }
 
-.dropdown-menu li {
-  list-style: none;
-}
-
 .dropdown-menu li a {
+  color: #000;
   display: block;
   padding: 10px 15px;
-  color: #000;
 }
 
 .dropdown-menu li a:hover {
   background: #f3f3f3;
 }
 
-/* SHOW CLASS */
 .dropdown-menu.show {
   display: block;
 }
 
-/* CONTENT */
-.content {
-  padding: 50px;
+/* HERO */
+.hero {
+  padding: 70px 40px;
+  background: #ffffff;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* SECTION */
+.section {
+  padding: 50px 40px;
+}
+
+.section.gray {
+  background: #f5f5f5;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background: #4b2f2f;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 </style>
 </head>
@@ -99,12 +141,48 @@ nav ul li a {
   </nav>
 </header>
 
-<div class="content">
+<!-- HERO -->
+<section class="hero">
   <h1>Welcome to AquaSurely</h1>
-  <p>Reliable Commercial & Industrial RO Solutions</p>
-</div>
+  <p>Reliable Commercial & Industrial RO Water Solutions</p>
+</section>
 
-<!-- JAVASCRIPT -->
+<!-- ABOUT -->
+<section class="section gray">
+  <h2>About Us</h2>
+  <p>
+    AquaSurely is a trusted provider of commercial and industrial RO water purification solutions.
+    We specialize in wholesale supply and customized RO plants as per your water quality and capacity requirements.
+  </p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section">
+  <h2>Our Products</h2>
+  <div class="products">
+    <div class="product-box">Commercial RO Plant</div>
+    <div class="product-box">Industrial RO Plant</div>
+    <div class="product-box">RO Membranes</div>
+    <div class="product-box">RO Spare Parts</div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section gray">
+  <h2>Why Choose AquaSurely</h2>
+  <ul>
+    <li>Customized RO Solutions</li>
+    <li>Wholesale Pricing</li>
+    <li>High-Quality Components</li>
+    <li>Complete After-Sales Support</li>
+  </ul>
+</section>
+
+<footer>
+  © 2026 AquaSurely. All Rights Reserved.
+</footer>
+
+<!-- JS -->
 <script>
 const btn = document.getElementById("waterBtn");
 const menu = document.getElementById("waterMenu");
@@ -114,7 +192,6 @@ btn.addEventListener("click", function(e) {
   menu.classList.toggle("show");
 });
 
-// Close when clicking outside
 document.addEventListener("click", function(e) {
   if (!e.target.closest(".dropdown")) {
     menu.classList.remove("show");
