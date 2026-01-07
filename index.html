@@ -6,194 +6,185 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#222;
-    line-height:1.6;
-    scroll-behavior:smooth;
-  }
-  a{text-decoration:none;color:inherit}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 
-  /* ================= HEADER / NAVBAR ================= */
-  header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:#ffffff;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-  }
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:#222;
+}
 
-  .nav{
-    max-width:1200px;
-    margin:auto;
-    padding:14px 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
+/* ================= HEADER ================= */
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
 
-  .logo{
-    font-size:22px;
-    font-weight:bold;
-    color:#0077b6;
-  }
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-  .menu a{
-    margin-left:22px;
-    font-weight:600;
-    color:#333;
-  }
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:#0077b6;
+}
 
-  .menu a:hover{
-    color:#0077b6;
-  }
+.menu a{
+  margin-left:22px;
+  font-weight:600;
+  color:#333;
+  padding-bottom:6px;
+}
 
-  /* ================= HERO ================= */
-  .hero{
-    position:relative;
-    min-height:45vh;
-    display:flex;
-    align-items:center;
-    background:url("banner.jpg") center/cover no-repeat;
-    padding:40px 20px;
-  }
+.menu a.active{
+  color:#0077b6;
+  border-bottom:3px solid #0077b6;
+}
 
-  .hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,40,80,0.75);
-  }
+/* ================= HERO ================= */
+.hero{
+  position:relative;
+  min-height:45vh;
+  display:flex;
+  align-items:center;
+  padding:40px 20px;
+  background:url("banner.jpg") center/cover no-repeat;
+}
 
-  .hero-content{
-    position:relative;
-    z-index:2;
-    max-width:650px;
-    color:#fff;
-  }
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,40,80,.75);
+}
 
-  .hero h1{
-    font-size:36px;
-    margin-bottom:12px;
-    text-shadow:0 2px 10px rgba(0,0,0,.7);
-  }
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  max-width:650px;
+}
 
-  .hero p{
-    margin-bottom:10px;
-    text-shadow:0 2px 8px rgba(0,0,0,.6);
-  }
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
+  text-shadow:0 2px 8px rgba(0,0,0,.7);
+}
 
-  .btn{
-    display:inline-block;
-    padding:12px 22px;
-    border-radius:6px;
-    font-weight:bold;
-    margin-top:10px;
-    margin-right:10px;
-  }
+.hero p{
+  margin-bottom:10px;
+}
 
-  .btn.call{background:#ffffff;color:#0077b6;}
-  .btn.wa{background:#25D366;color:#ffffff;}
+.btn{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:6px;
+  font-weight:bold;
+  margin-top:10px;
+  margin-right:10px;
+}
 
-  /* ================= SECTIONS ================= */
-  section{padding:60px 20px}
+.call{background:#fff;color:#0077b6}
+.wa{background:#25D366;color:#fff}
 
-  h2{
-    text-align:center;
-    font-size:28px;
-    color:#0077b6;
-    margin-bottom:25px;
-  }
+/* ================= SECTIONS ================= */
+section{
+  padding:70px 20px;
+  scroll-margin-top:80px;
+}
 
-  /* ================= PRODUCTS ================= */
-  .grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:20px;
-  }
+h2{
+  text-align:center;
+  color:#0077b6;
+  margin-bottom:25px;
+  font-size:28px;
+}
 
-  .product{
-    border:1px solid #e0e6ef;
-    border-radius:10px;
-    overflow:hidden;
-    background:#fff;
-  }
+/* ================= PRODUCTS ================= */
+.grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
 
-  .product img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-  }
+.card{
+  border:1px solid #e0e6ef;
+  border-radius:10px;
+  overflow:hidden;
+  background:#fff;
+}
 
-  .product .info{
-    padding:15px;
-  }
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
 
-  .price{font-weight:bold;color:#0077b6;}
+.card .info{padding:15px}
 
-  /* ================= ABOUT ================= */
-  .about{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-  }
+.price{font-weight:bold;color:#0077b6}
 
-  /* ================= DEMO FORM ================= */
-  .demo-section{
-    background:#f9f9f9;
-  }
+/* ================= ABOUT ================= */
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  font-size:16px;
+}
 
-  .demo-form{
-    max-width:600px;
-    margin:auto;
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 4px 18px rgba(0,0,0,.1);
-  }
+/* ================= CONTACT ================= */
+.form-box{
+  max-width:600px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 18px rgba(0,0,0,.1);
+}
 
-  .demo-form label{
-    display:block;
-    font-weight:600;
-    margin-top:14px;
-  }
+label{display:block;margin-top:14px;font-weight:600}
+input,select{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
 
-  .demo-form input,
-  .demo-form select{
-    width:100%;
-    padding:10px;
-    margin-top:6px;
-    border:1px solid #ccc;
-    border-radius:6px;
-  }
+button{
+  margin-top:18px;
+  width:100%;
+  padding:12px;
+  background:#0077b6;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-size:18px;
+  cursor:pointer;
+}
 
-  .demo-form button{
-    width:100%;
-    margin-top:18px;
-    padding:12px;
-    background:#0077b6;
-    color:#fff;
-    border:none;
-    border-radius:6px;
-    font-size:18px;
-    cursor:pointer;
-  }
+/* ================= FOOTER ================= */
+footer{
+  background:#0b2545;
+  color:#fff;
+  text-align:center;
+  padding:35px 20px;
+}
 
-  /* ================= FOOTER ================= */
-  footer{
-    background:#0b2545;
-    color:#fff;
-    padding:35px 20px;
-    text-align:center;
-  }
-
-  @media(max-width:768px){
-    .menu{display:none;} /* simple mobile */
-    .hero h1{font-size:28px}
-  }
+@media(max-width:768px){
+  .hero h1{font-size:28px}
+}
 </style>
 </head>
 
@@ -204,19 +195,20 @@
   <div class="nav">
     <div class="logo">AquaSurely</div>
     <div class="menu">
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact Us</a>
+      <a href="#home" class="tab-link active">Home</a>
+      <a href="#products" class="tab-link">Products</a>
+      <a href="#services" class="tab-link">Services</a>
+      <a href="#about" class="tab-link">About Us</a>
+      <a href="#contact" class="tab-link">Contact Us</a>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HOME -->
 <section class="hero" id="home">
   <div class="hero-content">
-    <h1>Premium RO Water Solutions for Every Business</h1>
-    <p>Commercial & Industrial RO systems with installation, AMC & maintenance.</p>
+    <h1>Premium RO Water Solutions</h1>
+    <p>Commercial & Industrial RO with installation, AMC & service</p>
     <a href="tel:+91XXXXXXXXXX" class="btn call">Call Now</a>
     <a href="https://wa.me/91XXXXXXXXXX" class="btn wa">WhatsApp</a>
   </div>
@@ -226,29 +218,28 @@
 <section id="products">
   <h2>Our Products</h2>
   <div class="grid">
-    <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=RO+500+LPH">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300">
       <div class="info">
         <h3>Commercial RO – 500 LPH</h3>
         <p class="price">₹58,000</p>
       </div>
     </div>
-
-    <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=RO+1000+LPH">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300">
       <div class="info">
         <h3>Industrial RO – 1000 LPH</h3>
         <p class="price">₹1,05,000</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=RO+Membrane">
-      <div class="info">
-        <h3>RO Membrane</h3>
-        <p class="price">₹3,900</p>
-      </div>
-    </div>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="about">
+    Installation • AMC • Maintenance • Spare Parts
   </div>
 </section>
 
@@ -256,49 +247,57 @@
 <section id="about">
   <h2>About Us</h2>
   <div class="about">
-    <p>
-      AquaSurely is a trusted provider of commercial and industrial RO water purification solutions, specializing in wholesale supply and customized RO systems. We design and deliver high-performance, reliable, and cost-effective RO plants tailored to your water quality, capacity, and application requirements.
-
-From manufacturing and installation to after-sales service and technical support, AquaSurely offers complete end-to-end solutions for factories, hotels, hospitals, schools, and large commercial setups.
-
-Choose AquaSurely for customized RO solutions that deliver purity, performance, and long-term reliability.
-    </p>
+    AquaSurely is a trusted provider of RO water solutions for commercial & industrial needs across India.
   </div>
 </section>
 
-<!-- CONTACT / DEMO -->
-<section class="demo-section" id="contact">
-  <h2>Request Free Demo / Quote</h2>
-
-  <form class="demo-form">
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Request Free Demo</h2>
+  <div class="form-box">
     <label>Name</label>
-    <input type="text" required>
-
+    <input type="text">
     <label>Mobile</label>
-    <input type="tel" required>
-
-    <label>Email</label>
-    <input type="email">
-
+    <input type="tel">
     <label>City</label>
     <input type="text">
-
-    <label>Interested In</label>
+    <label>Product</label>
     <select>
       <option>Commercial RO</option>
       <option>Industrial RO</option>
-      <option>AMC & Service</option>
+      <option>AMC</option>
     </select>
-
     <button>Submit</button>
-  </form>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© AquaSurely – RO Water Solutions</p>
-  <p>Phone: +91XXXXXXXXXX | Email: info@aquasurely.in</p>
+  © AquaSurely – RO Water Solutions
 </footer>
+
+<!-- ================= ACTIVE TAB SCRIPT ================= -->
+<script>
+const sections = document.querySelectorAll("section");
+const links = document.querySelectorAll(".tab-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  links.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
