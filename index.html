@@ -8,47 +8,50 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-
-body{
-  font-family:Arial, Helvetica, sans-serif;
-  color:#222;
-}
+body{font-family:Arial,Helvetica,sans-serif;color:#222}
 
 /* ================= HEADER ================= */
 header{
-  position:sticky;
-  top:0;
-  z-index:999;
+  position:sticky;top:0;z-index:999;
   background:#fff;
   box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
-
 .nav{
-  max-width:1200px;
-  margin:auto;
+  max-width:1200px;margin:auto;
   padding:14px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  display:flex;align-items:center;justify-content:space-between;
 }
+.logo{font-size:22px;font-weight:bold;color:#0077b6}
 
-.logo{
-  font-size:22px;
-  font-weight:bold;
-  color:#0077b6;
-}
-
-.menu a{
+.menu{display:flex;align-items:center}
+.menu > a,
+.dropdown-btn{
   margin-left:22px;
   font-weight:600;
   color:#333;
+  cursor:pointer;
   padding-bottom:6px;
 }
+.menu a.active{color:#0077b6;border-bottom:3px solid #0077b6}
 
-.menu a.active{
-  color:#0077b6;
-  border-bottom:3px solid #0077b6;
+/* ===== DROPDOWN ===== */
+.dropdown{position:relative}
+.dropdown-content{
+  position:absolute;
+  top:32px;left:0;
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:6px;
+  min-width:200px;
+  display:none;
+  box-shadow:0 4px 18px rgba(0,0,0,.15);
 }
+.dropdown-content a{
+  display:block;padding:10px 14px;
+  color:#333;font-weight:500;
+}
+.dropdown-content a:hover{background:#f4f7fb}
+.dropdown:hover .dropdown-content{display:block}
 
 /* ================= HERO ================= */
 .hero{
@@ -59,144 +62,110 @@ header{
   padding:40px 20px;
   background:url("banner.jpg") center/cover no-repeat;
 }
-
 .hero::after{
   content:"";
-  position:absolute;
-  inset:0;
+  position:absolute;inset:0;
   background:rgba(0,40,80,.75);
 }
-
 .hero-content{
-  position:relative;
-  z-index:2;
-  color:#fff;
-  max-width:650px;
+  position:relative;z-index:2;
+  color:#fff;max-width:650px;
 }
-
-.hero h1{
-  font-size:36px;
-  margin-bottom:10px;
-  text-shadow:0 2px 8px rgba(0,0,0,.7);
-}
-
-.hero p{
-  margin-bottom:10px;
-}
+.hero h1{font-size:36px;margin-bottom:10px}
+.hero p{margin-bottom:10px}
 
 .btn{
   display:inline-block;
   padding:12px 22px;
   border-radius:6px;
   font-weight:bold;
-  margin-top:10px;
-  margin-right:10px;
+  margin-top:10px;margin-right:10px;
 }
-
 .call{background:#fff;color:#0077b6}
 .wa{background:#25D366;color:#fff}
 
 /* ================= SECTIONS ================= */
-section{
-  padding:70px 20px;
-  scroll-margin-top:80px;
-}
-
-h2{
-  text-align:center;
-  color:#0077b6;
-  margin-bottom:25px;
-  font-size:28px;
-}
+section{padding:70px 20px;scroll-margin-top:90px}
+h2{text-align:center;color:#0077b6;margin-bottom:25px}
 
 /* ================= PRODUCTS ================= */
 .grid{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
+  max-width:1200px;margin:auto;
+  display:grid;gap:20px;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
 }
-
 .card{
   border:1px solid #e0e6ef;
   border-radius:10px;
   overflow:hidden;
   background:#fff;
+  cursor:pointer;
 }
-
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
+.card img{width:100%;height:180px;object-fit:cover}
 .card .info{padding:15px}
+.price{color:#0077b6;font-weight:bold}
 
-.price{font-weight:bold;color:#0077b6}
-
-/* ================= ABOUT ================= */
-.about{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  font-size:16px;
+/* ================= POPUP ================= */
+.modal{
+  display:none;
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.6);
+  z-index:9999;
+}
+.modal-content{
+  background:#fff;
+  max-width:500px;
+  margin:10% auto;
+  padding:25px;
+  border-radius:10px;
+  position:relative;
+}
+.close{
+  position:absolute;top:10px;right:14px;
+  font-size:20px;cursor:pointer;
 }
 
-/* ================= CONTACT ================= */
+/* ================= FORM ================= */
 .form-box{
-  max-width:600px;
-  margin:auto;
-  background:#fff;
-  padding:25px;
+  max-width:600px;margin:auto;
+  background:#fff;padding:25px;
   border-radius:10px;
   box-shadow:0 4px 18px rgba(0,0,0,.1);
 }
-
 label{display:block;margin-top:14px;font-weight:600}
 input,select{
-  width:100%;
-  padding:10px;
-  margin-top:6px;
-  border:1px solid #ccc;
-  border-radius:6px;
+  width:100%;padding:10px;margin-top:6px;
+  border:1px solid #ccc;border-radius:6px;
 }
-
 button{
-  margin-top:18px;
-  width:100%;
-  padding:12px;
-  background:#0077b6;
-  color:#fff;
-  border:none;
-  border-radius:6px;
-  font-size:18px;
-  cursor:pointer;
+  margin-top:18px;width:100%;
+  padding:12px;border:none;border-radius:6px;
+  background:#0077b6;color:#fff;font-size:18px;
 }
 
 /* ================= FOOTER ================= */
-footer{
-  background:#0b2545;
-  color:#fff;
-  text-align:center;
-  padding:35px 20px;
-}
-
-@media(max-width:768px){
-  .hero h1{font-size:28px}
-}
+footer{background:#0b2545;color:#fff;text-align:center;padding:35px 20px}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="logo">AquaSurely</div>
+
     <div class="menu">
       <a href="#home" class="tab-link active">Home</a>
-      <a href="#products" class="tab-link">Products</a>
+
+      <div class="dropdown">
+        <div class="dropdown-btn">Water Purifiers ▾</div>
+        <div class="dropdown-content">
+          <a href="#products">Commercial RO</a>
+          <a href="#products">Industrial RO</a>
+          <a href="#products">RO Membrane</a>
+        </div>
+      </div>
+
       <a href="#services" class="tab-link">Services</a>
       <a href="#about" class="tab-link">About Us</a>
       <a href="#contact" class="tab-link">Contact Us</a>
@@ -204,99 +173,81 @@ footer{
   </div>
 </header>
 
-<!-- HOME -->
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Premium RO Water Solutions</h1>
-    <p>Commercial & Industrial RO with installation, AMC & service</p>
+    <p>Commercial & Industrial RO with installation & AMC</p>
     <a href="tel:+91XXXXXXXXXX" class="btn call">Call Now</a>
     <a href="https://wa.me/91XXXXXXXXXX" class="btn wa">WhatsApp</a>
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="products">
-  <h2>Our Products</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/400x300">
-      <div class="info">
-        <h3>Commercial RO – 500 LPH</h3>
-        <p class="price">₹58,000</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/400x300">
-      <div class="info">
-        <h3>Industrial RO – 1000 LPH</h3>
-        <p class="price">₹1,05,000</p>
-      </div>
-    </div>
+<h2>Our Products</h2>
+<div class="grid">
+  <div class="card" onclick="openModal('Commercial RO 500 LPH','Ideal for hotels & offices','₹58,000')">
+    <img src="https://via.placeholder.com/400x300">
+    <div class="info"><h3>Commercial RO 500 LPH</h3><div class="price">₹58,000</div></div>
   </div>
+
+  <div class="card" onclick="openModal('Industrial RO 1000 LPH','Heavy duty system','₹1,05,000')">
+    <img src="https://via.placeholder.com/400x300">
+    <div class="info"><h3>Industrial RO 1000 LPH</h3><div class="price">₹1,05,000</div></div>
+  </div>
+</div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="about">
-    Installation • AMC • Maintenance • Spare Parts
-  </div>
-</section>
+<section id="services"><h2>Services</h2><p style="text-align:center">Installation • AMC • Maintenance</p></section>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Us</h2>
-  <div class="about">
-    AquaSurely is a trusted provider of RO water solutions for commercial & industrial needs across India.
-  </div>
-</section>
+<section id="about"><h2>About Us</h2><p style="text-align:center">Trusted RO water solution provider across India.</p></section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <h2>Request Free Demo</h2>
-  <div class="form-box">
-    <label>Name</label>
-    <input type="text">
-    <label>Mobile</label>
-    <input type="tel">
-    <label>City</label>
-    <input type="text">
-    <label>Product</label>
-    <select>
-      <option>Commercial RO</option>
-      <option>Industrial RO</option>
-      <option>AMC</option>
-    </select>
-    <button>Submit</button>
-  </div>
+<h2>Request Demo</h2>
+<div class="form-box">
+  <label>Name</label><input>
+  <label>Mobile</label><input>
+  <label>Product</label>
+  <select><option>Commercial RO</option><option>Industrial RO</option></select>
+  <button>Submit</button>
+</div>
 </section>
 
-<footer>
-  © AquaSurely – RO Water Solutions
-</footer>
+<footer>© AquaSurely RO Solutions</footer>
 
-<!-- ================= ACTIVE TAB SCRIPT ================= -->
+<!-- ===== POPUP ===== -->
+<div class="modal" id="popup">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h3 id="pTitle"></h3>
+    <p id="pDesc"></p>
+    <p class="price" id="pPrice"></p>
+  </div>
+</div>
+
 <script>
-const sections = document.querySelectorAll("section");
-const links = document.querySelectorAll(".tab-link");
+const sections=document.querySelectorAll("section");
+const links=document.querySelectorAll(".tab-link");
 
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  links.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
+window.addEventListener("scroll",()=>{
+ let current="";
+ sections.forEach(sec=>{
+  if(scrollY>=sec.offsetTop-100) current=sec.id;
+ });
+ links.forEach(l=>{
+  l.classList.remove("active");
+  if(l.getAttribute("href")==="#"+current) l.classList.add("active");
+ });
 });
+
+function openModal(title,desc,price){
+ document.getElementById("popup").style.display="block";
+ pTitle.innerText=title;
+ pDesc.innerText=desc;
+ pPrice.innerText=price;
+}
+function closeModal(){
+ document.getElementById("popup").style.display="none";
+}
 </script>
 
 </body>
