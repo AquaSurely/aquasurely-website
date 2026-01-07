@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AquaSurely | Commercial & Industrial RO Solutions</title>
+<title>AquaSurely | RO Water Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -11,10 +11,45 @@
     font-family:Arial, Helvetica, sans-serif;
     color:#222;
     line-height:1.6;
+    scroll-behavior:smooth;
   }
-  a{text-decoration:none}
+  a{text-decoration:none;color:inherit}
 
-  /* ===== HERO ===== */
+  /* ================= HEADER / NAVBAR ================= */
+  header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+  }
+
+  .nav{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#0077b6;
+  }
+
+  .menu a{
+    margin-left:22px;
+    font-weight:600;
+    color:#333;
+  }
+
+  .menu a:hover{
+    color:#0077b6;
+  }
+
+  /* ================= HERO ================= */
   .hero{
     position:relative;
     min-height:45vh;
@@ -23,37 +58,94 @@
     background:url("banner.jpg") center/cover no-repeat;
     padding:40px 20px;
   }
+
   .hero::after{
     content:"";
-    position:absolute;inset:0;
-    background:linear-gradient(rgba(0,40,80,0.75),rgba(0,40,80,0.75));
+    position:absolute;
+    inset:0;
+    background:rgba(0,40,80,0.75);
   }
+
   .hero-content{
-    position:relative;z-index:2;
-    max-width:650px;color:#fff;
+    position:relative;
+    z-index:2;
+    max-width:650px;
+    color:#fff;
   }
-  .hero h1{font-size:36px;margin-bottom:12px;text-shadow:0 2px 10px rgba(0,0,0,.7);}
-  .hero p{margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,.6);}
 
-  .btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:bold;margin-top:10px;margin-right:10px}
+  .hero h1{
+    font-size:36px;
+    margin-bottom:12px;
+    text-shadow:0 2px 10px rgba(0,0,0,.7);
+  }
+
+  .hero p{
+    margin-bottom:10px;
+    text-shadow:0 2px 8px rgba(0,0,0,.6);
+  }
+
+  .btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:6px;
+    font-weight:bold;
+    margin-top:10px;
+    margin-right:10px;
+  }
+
   .btn.call{background:#ffffff;color:#0077b6;}
-  .btn.wa{background:#25D366;color:#fff;}
+  .btn.wa{background:#25D366;color:#ffffff;}
 
-  /* ===== PRODUCTS ===== */
-  .products{padding:60px 20px}
-  .products h2{text-align:center;font-size:28px;color:#0077b6;margin-bottom:24px}
-  .grid {display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:1200px;margin:auto}
+  /* ================= SECTIONS ================= */
+  section{padding:60px 20px}
 
-  .product{background:#fff;border-radius:10px;border:1px solid #e0e6ef;overflow:hidden}
-  .product img{width:100%;height:180px;object-fit:cover}
-  .product .info{padding:15px}
-  .product h3{font-size:18px;margin-bottom:8px}
-  .product p{font-size:14px;color:#555;margin-bottom:10px}
-  .price{font-weight:bold;color:#0077b6}
+  h2{
+    text-align:center;
+    font-size:28px;
+    color:#0077b6;
+    margin-bottom:25px;
+  }
 
-  /* ===== DEMO/ENQUIRY FORM ===== */
-  .demo-section{background:#f9f9f9;padding:60px 20px}
-  .demo-section h2{text-align:center;color:#0077b6;font-size:30px;margin-bottom:20px}
+  /* ================= PRODUCTS ================= */
+  .grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+  }
+
+  .product{
+    border:1px solid #e0e6ef;
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+  }
+
+  .product img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+  }
+
+  .product .info{
+    padding:15px;
+  }
+
+  .price{font-weight:bold;color:#0077b6;}
+
+  /* ================= ABOUT ================= */
+  .about{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+  }
+
+  /* ================= DEMO FORM ================= */
+  .demo-section{
+    background:#f9f9f9;
+  }
+
   .demo-form{
     max-width:600px;
     margin:auto;
@@ -62,13 +154,25 @@
     border-radius:10px;
     box-shadow:0 4px 18px rgba(0,0,0,.1);
   }
-  .demo-form label{display:block;font-weight:600;margin-top:15px}
-  .demo-form input, .demo-form select{
-    width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:6px;
+
+  .demo-form label{
+    display:block;
+    font-weight:600;
+    margin-top:14px;
   }
-  .demo-form button{
-    margin-top:18px;
+
+  .demo-form input,
+  .demo-form select{
     width:100%;
+    padding:10px;
+    margin-top:6px;
+    border:1px solid #ccc;
+    border-radius:6px;
+  }
+
+  .demo-form button{
+    width:100%;
+    margin-top:18px;
     padding:12px;
     background:#0077b6;
     color:#fff;
@@ -78,104 +182,121 @@
     cursor:pointer;
   }
 
-  /* ===== FOOTER ===== */
-  footer{background:#0b2545;color:#fff;padding:35px 20px;text-align:center}
+  /* ================= FOOTER ================= */
+  footer{
+    background:#0b2545;
+    color:#fff;
+    padding:35px 20px;
+    text-align:center;
+  }
 
   @media(max-width:768px){
+    .menu{display:none;} /* simple mobile */
     .hero h1{font-size:28px}
-    .demo-form input, .demo-form select{font-size:16px}
   }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <div class="logo">AquaSurely</div>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+  </div>
+</header>
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
   <div class="hero-content">
     <h1>Premium RO Water Solutions for Every Business</h1>
-    <p>High-quality commercial & industrial RO systems with installation, AMC & service.</p>
+    <p>Commercial & Industrial RO systems with installation, AMC & maintenance.</p>
     <a href="tel:+91XXXXXXXXXX" class="btn call">Call Now</a>
     <a href="https://wa.me/91XXXXXXXXXX" class="btn wa">WhatsApp</a>
   </div>
 </section>
 
 <!-- PRODUCTS -->
-<section class="products">
-  <h2>Our Best Selling RO Systems</h2>
+<section id="products">
+  <h2>Our Products</h2>
   <div class="grid">
-
     <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=RO+500+LPH" alt="500 LPH RO">
+      <img src="https://via.placeholder.com/400x300?text=RO+500+LPH">
       <div class="info">
-        <h3>Commercial RO 500 LPH</h3>
-        <p>Ideal for hotels, schools & office use.</p>
-        <div class="price">₹58,000</div>
+        <h3>Commercial RO – 500 LPH</h3>
+        <p class="price">₹58,000</p>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=RO+1000+LPH" alt="1000 LPH RO">
+      <img src="https://via.placeholder.com/400x300?text=RO+1000+LPH">
       <div class="info">
-        <h3>Industrial RO 1000 LPH</h3>
-        <p>Heavy duty high output system.</p>
-        <div class="price">₹1,05,000</div>
+        <h3>Industrial RO – 1000 LPH</h3>
+        <p class="price">₹1,05,000</p>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=RO+Membrane" alt="RO Membrane">
+      <img src="https://via.placeholder.com/400x300?text=RO+Membrane">
       <div class="info">
         <h3>RO Membrane</h3>
-        <p>Suitable for all major brands.</p>
-        <div class="price">₹3,900</div>
+        <p class="price">₹3,900</p>
       </div>
     </div>
-
-    <div class="product">
-      <img src="https://via.placeholder.com/400x300?text=AMC+Service" alt="AMC">
-      <div class="info">
-        <h3>AMC & Maintenance</h3>
-        <p>Annual service & spare support.</p>
-        <div class="price">Call for quote</div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- DEMO / ENQUIRY FORM -->
-<section class="demo-section">
-  <h2>Request a Free Demo / Quote</h2>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about">
+    <p>
+      AquaSurely is a trusted provider of commercial and industrial RO water purification solutions, specializing in wholesale supply and customized RO systems. We design and deliver high-performance, reliable, and cost-effective RO plants tailored to your water quality, capacity, and application requirements.
 
-  <form class="demo-form" action="mailto:info@aquasurely.in" method="post">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" required>
+From manufacturing and installation to after-sales service and technical support, AquaSurely offers complete end-to-end solutions for factories, hotels, hospitals, schools, and large commercial setups.
 
-    <label for="phone">Mobile Number</label>
-    <input type="tel" id="phone" name="phone" required>
+Choose AquaSurely for customized RO solutions that deliver purity, performance, and long-term reliability.
+    </p>
+  </div>
+</section>
 
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email">
+<!-- CONTACT / DEMO -->
+<section class="demo-section" id="contact">
+  <h2>Request Free Demo / Quote</h2>
 
-    <label for="city">City</label>
-    <input type="text" id="city" name="city">
+  <form class="demo-form">
+    <label>Name</label>
+    <input type="text" required>
 
-    <label for="product">Interested In</label>
-    <select id="product" name="product">
-      <option>Commercial RO 500 LPH</option>
-      <option>Industrial RO 1000 LPH</option>
-      <option>RO Membrane</option>
-      <option>AMC & Maintenance</option>
+    <label>Mobile</label>
+    <input type="tel" required>
+
+    <label>Email</label>
+    <input type="email">
+
+    <label>City</label>
+    <input type="text">
+
+    <label>Interested In</label>
+    <select>
+      <option>Commercial RO</option>
+      <option>Industrial RO</option>
+      <option>AMC & Service</option>
     </select>
 
-    <button type="submit">Submit Request</button>
+    <button>Submit</button>
   </form>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© AquaSurely – Commercial & Industrial Water Solutions</p>
+  <p>© AquaSurely – RO Water Solutions</p>
   <p>Phone: +91XXXXXXXXXX | Email: info@aquasurely.in</p>
 </footer>
 
