@@ -12,46 +12,81 @@ body{font-family:Arial,Helvetica,sans-serif;color:#222}
 
 /* ================= HEADER ================= */
 header{
-  position:sticky;top:0;z-index:999;
+  position:sticky;
+  top:0;
+  z-index:999;
   background:#fff;
   box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
-.nav{
-  max-width:1200px;margin:auto;
-  padding:14px 20px;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.logo{font-size:22px;font-weight:bold;color:#0077b6}
 
-.menu{display:flex;align-items:center}
-.menu > a,
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:#0077b6;
+}
+
+.menu{
+  display:flex;
+  align-items:center;
+}
+
+.menu a,
 .dropdown-btn{
   margin-left:22px;
   font-weight:600;
   color:#333;
+  background:none;
+  border:none;
   cursor:pointer;
   padding-bottom:6px;
+  font-size:16px;
 }
-.menu a.active{color:#0077b6;border-bottom:3px solid #0077b6}
 
-/* ===== DROPDOWN ===== */
-.dropdown{position:relative}
+.menu a.active{
+  color:#0077b6;
+  border-bottom:3px solid #0077b6;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown{
+  position:relative;
+}
+
 .dropdown-content{
+  display:none;
   position:absolute;
-  top:32px;left:0;
+  top:36px;
+  left:0;
   background:#fff;
   border:1px solid #ddd;
   border-radius:6px;
   min-width:200px;
-  display:none;
   box-shadow:0 4px 18px rgba(0,0,0,.15);
 }
+
 .dropdown-content a{
-  display:block;padding:10px 14px;
-  color:#333;font-weight:500;
+  display:block;
+  padding:10px 14px;
+  color:#333;
+  font-weight:500;
 }
-.dropdown-content a:hover{background:#f4f7fb}
-.dropdown:hover .dropdown-content{display:block}
+
+.dropdown-content a:hover{
+  background:#f4f7fb;
+}
+
+.dropdown-content.show{
+  display:block;
+}
 
 /* ================= HERO ================= */
 .hero{
@@ -62,38 +97,63 @@ header{
   padding:40px 20px;
   background:url("banner.jpg") center/cover no-repeat;
 }
+
 .hero::after{
   content:"";
-  position:absolute;inset:0;
+  position:absolute;
+  inset:0;
   background:rgba(0,40,80,.75);
 }
+
 .hero-content{
-  position:relative;z-index:2;
-  color:#fff;max-width:650px;
+  position:relative;
+  z-index:2;
+  color:#fff;
+  max-width:650px;
 }
-.hero h1{font-size:36px;margin-bottom:10px}
-.hero p{margin-bottom:10px}
+
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  margin-bottom:10px;
+}
 
 .btn{
   display:inline-block;
   padding:12px 22px;
   border-radius:6px;
   font-weight:bold;
-  margin-top:10px;margin-right:10px;
+  margin-top:10px;
+  margin-right:10px;
 }
+
 .call{background:#fff;color:#0077b6}
 .wa{background:#25D366;color:#fff}
 
 /* ================= SECTIONS ================= */
-section{padding:70px 20px;scroll-margin-top:90px}
-h2{text-align:center;color:#0077b6;margin-bottom:25px}
+section{
+  padding:70px 20px;
+  scroll-margin-top:90px;
+}
+
+h2{
+  text-align:center;
+  color:#0077b6;
+  margin-bottom:25px;
+}
 
 /* ================= PRODUCTS ================= */
 .grid{
-  max-width:1200px;margin:auto;
-  display:grid;gap:20px;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
 }
+
 .card{
   border:1px solid #e0e6ef;
   border-radius:10px;
@@ -101,17 +161,31 @@ h2{text-align:center;color:#0077b6;margin-bottom:25px}
   background:#fff;
   cursor:pointer;
 }
-.card img{width:100%;height:180px;object-fit:cover}
-.card .info{padding:15px}
-.price{color:#0077b6;font-weight:bold}
 
-/* ================= POPUP ================= */
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card .info{
+  padding:15px;
+}
+
+.price{
+  color:#0077b6;
+  font-weight:bold;
+}
+
+/* ================= MODAL ================= */
 .modal{
   display:none;
-  position:fixed;inset:0;
+  position:fixed;
+  inset:0;
   background:rgba(0,0,0,.6);
   z-index:9999;
 }
+
 .modal-content{
   background:#fff;
   max-width:500px;
@@ -120,36 +194,63 @@ h2{text-align:center;color:#0077b6;margin-bottom:25px}
   border-radius:10px;
   position:relative;
 }
+
 .close{
-  position:absolute;top:10px;right:14px;
-  font-size:20px;cursor:pointer;
+  position:absolute;
+  top:10px;
+  right:14px;
+  font-size:20px;
+  cursor:pointer;
 }
 
 /* ================= FORM ================= */
 .form-box{
-  max-width:600px;margin:auto;
-  background:#fff;padding:25px;
+  max-width:600px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
   border-radius:10px;
   box-shadow:0 4px 18px rgba(0,0,0,.1);
 }
-label{display:block;margin-top:14px;font-weight:600}
-input,select{
-  width:100%;padding:10px;margin-top:6px;
-  border:1px solid #ccc;border-radius:6px;
+
+label{
+  display:block;
+  margin-top:14px;
+  font-weight:600;
 }
+
+input,select{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
 button{
-  margin-top:18px;width:100%;
-  padding:12px;border:none;border-radius:6px;
-  background:#0077b6;color:#fff;font-size:18px;
+  margin-top:18px;
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  background:#0077b6;
+  color:#fff;
+  font-size:18px;
 }
 
 /* ================= FOOTER ================= */
-footer{background:#0b2545;color:#fff;text-align:center;padding:35px 20px}
+footer{
+  background:#0b2545;
+  color:#fff;
+  text-align:center;
+  padding:35px 20px;
+}
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="logo">AquaSurely</div>
@@ -158,11 +259,13 @@ footer{background:#0b2545;color:#fff;text-align:center;padding:35px 20px}
       <a href="#home" class="tab-link active">Home</a>
 
       <div class="dropdown">
-        <div class="dropdown-btn">Water Purifiers ▾</div>
-        <div class="dropdown-content">
-          <a href="#products">Commercial RO</a>
-          <a href="#products">Industrial RO</a>
-          <a href="#products">RO Membrane</a>
+        <button class="dropdown-btn" onclick="toggleDropdown(event)">
+          Water Purifiers ▾
+        </button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#products" onclick="closeDropdown()">Commercial RO</a>
+          <a href="#products" onclick="closeDropdown()">Industrial RO</a>
+          <a href="#products" onclick="closeDropdown()">RO Membrane</a>
         </div>
       </div>
 
@@ -173,48 +276,69 @@ footer{background:#0b2545;color:#fff;text-align:center;padding:35px 20px}
   </div>
 </header>
 
+<!-- HOME -->
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Premium RO Water Solutions</h1>
-    <p>Commercial & Industrial RO with installation & AMC</p>
+    <p>Commercial & Industrial RO with Installation & AMC</p>
     <a href="tel:+91XXXXXXXXXX" class="btn call">Call Now</a>
     <a href="https://wa.me/91XXXXXXXXXX" class="btn wa">WhatsApp</a>
   </div>
 </section>
 
+<!-- PRODUCTS -->
 <section id="products">
 <h2>Our Products</h2>
 <div class="grid">
+
   <div class="card" onclick="openModal('Commercial RO 500 LPH','Ideal for hotels & offices','₹58,000')">
     <img src="https://via.placeholder.com/400x300">
-    <div class="info"><h3>Commercial RO 500 LPH</h3><div class="price">₹58,000</div></div>
+    <div class="info">
+      <h3>Commercial RO 500 LPH</h3>
+      <div class="price">₹58,000</div>
+    </div>
   </div>
 
-  <div class="card" onclick="openModal('Industrial RO 1000 LPH','Heavy duty system','₹1,05,000')">
+  <div class="card" onclick="openModal('Industrial RO 1000 LPH','Heavy duty RO system','₹1,05,000')">
     <img src="https://via.placeholder.com/400x300">
-    <div class="info"><h3>Industrial RO 1000 LPH</h3><div class="price">₹1,05,000</div></div>
+    <div class="info">
+      <h3>Industrial RO 1000 LPH</h3>
+      <div class="price">₹1,05,000</div>
+    </div>
   </div>
+
 </div>
 </section>
 
-<section id="services"><h2>Services</h2><p style="text-align:center">Installation • AMC • Maintenance</p></section>
+<section id="services">
+<h2>Services</h2>
+<p style="text-align:center">Installation • AMC • Maintenance • Spare Parts</p>
+</section>
 
-<section id="about"><h2>About Us</h2><p style="text-align:center">Trusted RO water solution provider across India.</p></section>
+<section id="about">
+<h2>About Us</h2>
+<p style="text-align:center">Trusted RO water solution provider across India.</p>
+</section>
 
 <section id="contact">
 <h2>Request Demo</h2>
 <div class="form-box">
-  <label>Name</label><input>
-  <label>Mobile</label><input>
+  <label>Name</label>
+  <input>
+  <label>Mobile</label>
+  <input>
   <label>Product</label>
-  <select><option>Commercial RO</option><option>Industrial RO</option></select>
+  <select>
+    <option>Commercial RO</option>
+    <option>Industrial RO</option>
+  </select>
   <button>Submit</button>
 </div>
 </section>
 
-<footer>© AquaSurely RO Solutions</footer>
+<footer>© AquaSurely – RO Water Solutions</footer>
 
-<!-- ===== POPUP ===== -->
+<!-- POPUP -->
 <div class="modal" id="popup">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">×</span>
@@ -225,28 +349,42 @@ footer{background:#0b2545;color:#fff;text-align:center;padding:35px 20px}
 </div>
 
 <script>
+/* ACTIVE TAB */
 const sections=document.querySelectorAll("section");
 const links=document.querySelectorAll(".tab-link");
 
 window.addEventListener("scroll",()=>{
- let current="";
- sections.forEach(sec=>{
-  if(scrollY>=sec.offsetTop-100) current=sec.id;
- });
- links.forEach(l=>{
-  l.classList.remove("active");
-  if(l.getAttribute("href")==="#"+current) l.classList.add("active");
- });
+  let current="";
+  sections.forEach(sec=>{
+    if(scrollY>=sec.offsetTop-100) current=sec.id;
+  });
+  links.forEach(l=>{
+    l.classList.remove("active");
+    if(l.getAttribute("href")==="#"+current) l.classList.add("active");
+  });
 });
 
-function openModal(title,desc,price){
- document.getElementById("popup").style.display="block";
- pTitle.innerText=title;
- pDesc.innerText=desc;
- pPrice.innerText=price;
+/* DROPDOWN */
+function toggleDropdown(e){
+  e.stopPropagation();
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+function closeDropdown(){
+  document.getElementById("dropdownMenu").classList.remove("show");
+}
+document.addEventListener("click",()=>{
+  document.getElementById("dropdownMenu").classList.remove("show");
+});
+
+/* PRODUCT MODAL */
+function openModal(t,d,p){
+  popup.style.display="block";
+  pTitle.innerText=t;
+  pDesc.innerText=d;
+  pPrice.innerText=p;
 }
 function closeModal(){
- document.getElementById("popup").style.display="none";
+  popup.style.display="none";
 }
 </script>
 
