@@ -2,235 +2,178 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AquaSurely | Commercial & Industrial RO Plant</title>
+
+<!-- ===== SEO ===== -->
+<title>Commercial & Industrial RO Plants | AquaSurely</title>
+<meta name="description" content="Buy Commercial & Industrial RO plants 500 LPH, 1000 LPH, 2000 LPH, 3000 LPH with installation & AMC.">
+<meta name="keywords" content="Commercial RO Plant, Industrial RO Plant 1000 LPH, RO Plant Supplier">
+<meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- SEO -->
-<meta name="description" content="Commercial & Industrial RO Plants – 500 LPH to 3000 LPH. Installation, AMC & Maintenance. AquaSurely – Trust Every Drop.">
-<meta name="keywords" content="Commercial RO Plant, Industrial RO Plant, 500 LPH RO, 1000 LPH RO, AquaSurely">
-<meta name="author" content="AquaSurely">
-
 <style>
-body{margin:0;font-family:Poppins,Arial,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f6f8fb;color:#222}
 
-/* NAVBAR */
-header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:999}
-.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{width:55px}
-.logo-text b{color:#0B5ED7;font-size:22px}
-.logo-text span{
-  font-size:13px;
-  font-weight:600;
-  background:linear-gradient(90deg,#0077B6,#00B4D8);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-.menu a{margin:0 12px;text-decoration:none;color:#333;font-weight:600}
-.menu a:hover{color:#0B5ED7}
+/* ===== HEADER ===== */
+header{
+position:fixed;top:0;width:100%;background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:999}
+.nav{
+max-width:1200px;margin:auto;
+display:flex;justify-content:space-between;
+align-items:center;padding:14px 20px}
+.logo{font-size:22px;font-weight:700;color:#0077b6}
+.menu{display:flex;gap:24px}
+.menu a{text-decoration:none;color:#222;font-weight:600}
+.menu a.active{color:#0077b6}
 
-/* DROPDOWN */
-.dropdown{position:relative;display:inline-block}
-.drop-menu{
-  display:none;
-  position:absolute;
-  background:#fff;
-  padding:10px;
-  border-radius:6px;
-  box-shadow:0 5px 20px rgba(0,0,0,.15)
-}
-.dropdown:hover .drop-menu{display:block}
-.drop-menu a{display:block;padding:6px 12px}
+/* ===== PAGE TITLE ===== */
+.page-title{
+margin-top:80px;
+background:linear-gradient(120deg,#0077b6,#00b4d8);
+color:#fff;padding:40px 20px;text-align:center}
+.page-title h1{font-size:36px}
 
-/* HERO */
-.hero{
-  background:url("images/banner.jpg") center/cover no-repeat;
-  position:relative;
-  padding:90px 20px;
-  color:#fff;
-}
-.hero::before{
-  content:"";
-  position:absolute;inset:0;
-  background:rgba(0,0,0,.45);
-}
-.hero-content{
-  position:relative;
-  max-width:1200px;
-  margin:auto;
-}
-.hero h1{font-size:42px}
-.hero p{max-width:600px}
-.btn{
-  padding:12px 22px;
-  border-radius:6px;
-  font-weight:700;
-  margin-right:10px;
-  display:inline-block;
-}
-.call{background:#fff;color:#0B5ED7}
-.wa{background:#25D366;color:#fff}
+/* ===== PRODUCTS ===== */
+section{padding:60px 20px}
+.container{max-width:1200px;margin:auto}
 
-/* PRODUCTS */
-.section{padding:60px 20px}
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-  max-width:1200px;
-  margin:auto;
-}
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px}
+
 .card{
-  background:#fff;
-  border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,.1);
-  padding:15px;
-  text-align:center;
-}
-.card img{width:100%;height:200px;object-fit:contain}
-.price{font-size:20px;color:#0B5ED7;font-weight:700}
-.card button{
-  margin-top:10px;
-  padding:10px 18px;
-  border:none;
-  background:#0B5ED7;
-  color:#fff;
-  border-radius:6px;
-  cursor:pointer;
-}
+background:#fff;border-radius:14px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.1);
+transition:.3s}
+.card:hover{transform:translateY(-6px)}
 
-/* POPUP */
-.popup{
-  display:none;
-  position:fixed;inset:0;
-  background:rgba(0,0,0,.6);
-  justify-content:center;
-  align-items:center;
-  z-index:1000;
-}
-.popup form{
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-  width:320px;
-}
-.popup input,.popup button{
-  width:100%;
-  padding:10px;
-  margin-top:10px;
-}
-.popup button{background:#0B5ED7;color:#fff;border:none}
+.card img{
+width:100%;height:240px;
+object-fit:contain;background:#f9f9f9}
 
-/* FOOTER */
-footer{
-  background:#0B2545;
-  color:#fff;
-  padding:30px;
-  text-align:center;
-}
+.card-body{padding:18px}
 
-/* WHATSAPP FLOAT */
+.card-body h3{
+font-size:20px;margin-bottom:8px}
+
+.card-body p{
+font-size:14px;color:#555;margin-bottom:12px}
+
+.price{
+display:flex;justify-content:space-between;
+font-size:18px;font-weight:700;color:#0077b6;
+margin-bottom:12px}
+
+.card-body a{
+display:block;text-align:center;
+padding:12px;background:#0077b6;
+color:#fff;text-decoration:none;
+border-radius:6px;font-weight:700}
+
+/* ===== WHATSAPP FLOAT ===== */
 .whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:12px 16px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:700;
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:#fff;
+padding:14px 16px;border-radius:50px;
+font-weight:700;text-decoration:none;
+box-shadow:0 4px 15px rgba(0,0,0,.3)
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#0b2545;color:#cfd8e3;
+padding:30px 20px;text-align:center;
+margin-top:50px}
+
+@media(max-width:768px){
+.page-title h1{font-size:28px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
 <div class="nav">
-  <div class="logo">
-    <img src="images/logo-aquasurely-icon.png">
-    <div class="logo-text">
-      <b>AquaSurely</b><br>
-      <span>Trust Every Drop</span>
-    </div>
-  </div>
-  <div class="menu">
-    <a href="#">Home</a>
-    <div class="dropdown">
-      <a href="#">Products ▾</a>
-      <div class="drop-menu">
-        <a href="#products">500 LPH</a>
-        <a href="#products">1000 LPH</a>
-        <a href="#products">2000 LPH</a>
-        <a href="#products">3000 LPH</a>
-      </div>
-    </div>
-    <a href="#contact">Contact</a>
-  </div>
+<div class="logo">AquaSurely</div>
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="products.html" class="active">Products</a>
+<a href="index.html#contact">Contact</a>
+</div>
 </div>
 </header>
 
-<section class="hero">
-<div class="hero-content">
-<h1>Premium RO Water Solutions</h1>
-<p>Commercial & Industrial RO Plants with Installation, AMC & Maintenance</p>
-<a href="tel:+919650548432" class="btn call">Call Now</a>
-<a href="https://wa.me/919650548432" class="btn wa">WhatsApp</a>
+<!-- ===== TITLE ===== -->
+<div class="page-title">
+<h1>Commercial & Industrial RO Plants</h1>
+<p>High-performance RO systems with Installation & AMC</p>
 </div>
-</section>
 
-<section class="section" id="products">
-<h2 style="text-align:center">Our Products</h2>
+<!-- ===== PRODUCTS ===== -->
+<section>
+<div class="container">
+
 <div class="products">
-  <div class="card">
-    <img src="ro-500.jpg">
-    <h3>Commercial RO 500 LPH</h3>
-    <div class="price">₹58,000</div>
-    <button onclick="openPopup()">Enquiry</button>
-  </div>
-  <div class="card">
-    <img src="ro-1000.jpg">
-    <h3>RO Plant 1000 LPH</h3>
-    <div class="price">₹1,05,000</div>
-    <button onclick="openPopup()">Enquiry</button>
-  </div>
-  <div class="card">
-    <img src="ro-2000.jpg">
-    <h3>RO Plant 2000 LPH</h3>
-    <div class="price">₹1,90,000</div>
-    <button onclick="openPopup()">Enquiry</button>
-  </div>
-  <div class="card">
-    <img src="ro-3000.jpg">
-    <h3>RO Plant 3000 LPH</h3>
-    <div class="price">₹2,80,000</div>
-    <button onclick="openPopup()">Enquiry</button>
-  </div>
+
+<!-- 500 LPH -->
+<div class="card">
+<img src="ro-500.jpg" alt="Commercial RO 500 LPH">
+<div class="card-body">
+<h3>Commercial RO – 500 LPH</h3>
+<p>Ideal for hotels, schools, offices & commercial use.</p>
+<div class="price"><span>₹65,000</span><span>₹58,000</span></div>
+<a href="https://wa.me/919650548432?text=I%20need%20Commercial%20RO%20500%20LPH">Enquire Now</a>
+</div>
+</div>
+
+<!-- 1000 LPH -->
+<div class="card">
+<img src="ro-1000.jpg" alt="Industrial RO 1000 LPH">
+<div class="card-body">
+<h3>Industrial RO – 1000 LPH</h3>
+<p>Heavy-duty system for continuous industrial use.</p>
+<div class="price"><span>₹1,25,000</span><span>₹1,10,000</span></div>
+<a href="https://wa.me/919650548432?text=I%20need%20Industrial%20RO%201000%20LPH">Enquire Now</a>
+</div>
+</div>
+
+<!-- 2000 LPH -->
+<div class="card">
+<img src="ro-2000.jpg" alt="Industrial RO 2000 LPH">
+<div class="card-body">
+<h3>Industrial RO – 2000 LPH</h3>
+<p>High capacity RO plant for factories & plants.</p>
+<div class="price"><span>₹2,10,000</span><span>₹1,95,000</span></div>
+<a href="https://wa.me/919650548432?text=I%20need%20Industrial%20RO%202000%20LPH">Enquire Now</a>
+</div>
+</div>
+
+<!-- 3000 LPH -->
+<div class="card">
+<img src="ro-3000.jpg" alt="Industrial RO 3000 LPH">
+<div class="card-body">
+<h3>Industrial RO – 3000 LPH</h3>
+<p>Large-scale industrial water purification solution.</p>
+<div class="price"><span>₹3,20,000</span><span>₹2,95,000</span></div>
+<a href="https://wa.me/919650548432?text=I%20need%20Industrial%20RO%203000%20LPH">Enquire Now</a>
+</div>
+</div>
+
+</div>
 </div>
 </section>
 
-<div class="popup" id="popup">
-<form>
-<h3>Get Free Consultation</h3>
-<input placeholder="Your Name">
-<input placeholder="Mobile Number">
-<button>Submit</button>
-<button type="button" onclick="closePopup()">Close</button>
-</form>
-</div>
-
-<footer id="contact">
+<footer>
 <p>📞 +91 9650548432 | 📧 surelyaqua@gmail.com</p>
-<p>© AquaSurely – Trust Every Drop</p>
+<p>© AquaSurely – Commercial & Industrial RO Solutions</p>
 </footer>
 
-<a href="https://wa.me/919650548432" class="whatsapp">💬 WhatsApp</a>
-
-<script>
-function openPopup(){document.getElementById("popup").style.display="flex";}
-function closePopup(){document.getElementById("popup").style.display="none";}
-</script>
+<a class="whatsapp" href="https://wa.me/919650548432">💬 WhatsApp</a>
 
 </body>
 </html>
