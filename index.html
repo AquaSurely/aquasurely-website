@@ -6,17 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#222}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:#222;
+}
 
 /* ================= HEADER ================= */
 header{
-  position:sticky;
+  position:fixed;
   top:0;
-  z-index:999;
+  width:100%;
+  z-index:1000;
   background:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 .nav{
@@ -24,8 +31,8 @@ header{
   margin:auto;
   padding:14px 20px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
@@ -34,21 +41,12 @@ header{
   color:#0077b6;
 }
 
-.menu{
-  display:flex;
-  align-items:center;
-}
-
-.menu a,
-.dropdown-btn{
+.menu a{
   margin-left:22px;
-  font-weight:600;
+  text-decoration:none;
   color:#333;
-  background:none;
-  border:none;
-  cursor:pointer;
+  font-weight:600;
   padding-bottom:6px;
-  font-size:16px;
 }
 
 .menu a.active{
@@ -56,186 +54,84 @@ header{
   border-bottom:3px solid #0077b6;
 }
 
-/* ================= DROPDOWN ================= */
-.dropdown{
-  position:relative;
-}
-
-.dropdown-content{
-  display:none;
-  position:absolute;
-  top:36px;
-  left:0;
-  background:#fff;
-  border:1px solid #ddd;
-  border-radius:6px;
-  min-width:200px;
-  box-shadow:0 4px 18px rgba(0,0,0,.15);
-}
-
-.dropdown-content a{
-  display:block;
-  padding:10px 14px;
-  color:#333;
-  font-weight:500;
-}
-
-.dropdown-content a:hover{
-  background:#f4f7fb;
-}
-
-.dropdown-content.show{
-  display:block;
-}
-
 /* ================= HERO ================= */
 .hero{
+  margin-top:70px;
   position:relative;
-  min-height:45vh;
+  height:45vh;
+  background:url("banner.jpg") center/cover no-repeat;
+  animation:zoomBg 18s ease-in-out infinite alternate;
   display:flex;
   align-items:center;
-  padding:40px 20px;
-  background:url("banner.jpg") center/cover no-repeat;
 }
 
+/* Slow Zoom Animation */
+@keyframes zoomBg{
+  from{background-size:100%}
+  to{background-size:112%}
+}
+
+/* Dark Overlay */
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,40,80,.75);
+  background:rgba(0,40,80,.68);
 }
 
+/* Text Content */
 .hero-content{
   position:relative;
   z-index:2;
   color:#fff;
+  padding:40px 60px;
   max-width:650px;
 }
 
 .hero h1{
-  font-size:36px;
-  margin-bottom:10px;
+  font-size:38px;
+  margin-bottom:12px;
 }
 
 .hero p{
-  margin-bottom:10px;
+  font-size:18px;
+  margin-bottom:16px;
 }
 
+/* Buttons */
 .btn{
   display:inline-block;
-  padding:12px 22px;
+  padding:12px 24px;
   border-radius:6px;
   font-weight:bold;
-  margin-top:10px;
+  text-decoration:none;
   margin-right:10px;
 }
 
-.call{background:#fff;color:#0077b6}
-.wa{background:#25D366;color:#fff}
+.call{
+  background:#fff;
+  color:#0077b6;
+}
+
+.wa{
+  background:#25D366;
+  color:#fff;
+}
 
 /* ================= SECTIONS ================= */
 section{
-  padding:70px 20px;
-  scroll-margin-top:90px;
+  padding:80px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
 }
 
 h2{
   text-align:center;
+  margin-bottom:20px;
   color:#0077b6;
-  margin-bottom:25px;
-}
-
-/* ================= PRODUCTS ================= */
-.grid{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-
-.card{
-  border:1px solid #e0e6ef;
-  border-radius:10px;
-  overflow:hidden;
-  background:#fff;
-  cursor:pointer;
-}
-
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-.card .info{
-  padding:15px;
-}
-
-.price{
-  color:#0077b6;
-  font-weight:bold;
-}
-
-/* ================= MODAL ================= */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.6);
-  z-index:9999;
-}
-
-.modal-content{
-  background:#fff;
-  max-width:500px;
-  margin:10% auto;
-  padding:25px;
-  border-radius:10px;
-  position:relative;
-}
-
-.close{
-  position:absolute;
-  top:10px;
-  right:14px;
-  font-size:20px;
-  cursor:pointer;
-}
-
-/* ================= FORM ================= */
-.form-box{
-  max-width:600px;
-  margin:auto;
-  background:#fff;
-  padding:25px;
-  border-radius:10px;
-  box-shadow:0 4px 18px rgba(0,0,0,.1);
-}
-
-label{
-  display:block;
-  margin-top:14px;
-  font-weight:600;
-}
-
-input,select{
-  width:100%;
-  padding:10px;
-  margin-top:6px;
-  border:1px solid #ccc;
-  border-radius:6px;
-}
-
-button{
-  margin-top:18px;
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:6px;
-  background:#0077b6;
-  color:#fff;
-  font-size:18px;
 }
 
 /* ================= FOOTER ================= */
@@ -243,7 +139,20 @@ footer{
   background:#0b2545;
   color:#fff;
   text-align:center;
-  padding:35px 20px;
+  padding:30px 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  .hero{
+    height:55vh;
+  }
+  .hero h1{
+    font-size:28px;
+  }
+  .hero-content{
+    padding:20px;
+  }
 }
 </style>
 </head>
@@ -254,29 +163,17 @@ footer{
 <header>
   <div class="nav">
     <div class="logo">AquaSurely</div>
-
     <div class="menu">
-      <a href="#home" class="tab-link active">Home</a>
-
-      <div class="dropdown">
-        <button class="dropdown-btn" onclick="toggleDropdown(event)">
-          Water Purifiers ▾
-        </button>
-        <div class="dropdown-content" id="dropdownMenu">
-          <a href="#products" onclick="closeDropdown()">Commercial RO</a>
-          <a href="#products" onclick="closeDropdown()">Industrial RO</a>
-          <a href="#products" onclick="closeDropdown()">RO Membrane</a>
-        </div>
-      </div>
-
-      <a href="#services" class="tab-link">Services</a>
-      <a href="#about" class="tab-link">About Us</a>
-      <a href="#contact" class="tab-link">Contact Us</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
     </div>
   </div>
 </header>
 
-<!-- HOME -->
+<!-- HERO BANNER -->
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Premium RO Water Solutions</h1>
@@ -288,105 +185,47 @@ footer{
 
 <!-- PRODUCTS -->
 <section id="products">
-<h2>Our Products</h2>
-<div class="grid">
-
-  <div class="card" onclick="openModal('Commercial RO 500 LPH','Ideal for hotels & offices','₹58,000')">
-    <img src="https://via.placeholder.com/400x300">
-    <div class="info">
-      <h3>Commercial RO 500 LPH</h3>
-      <div class="price">₹58,000</div>
-    </div>
+  <div class="container">
+    <h2>Our Products</h2>
+    <p style="text-align:center">
+      Commercial RO • Industrial RO • RO Membranes
+    </p>
   </div>
-
-  <div class="card" onclick="openModal('Industrial RO 1000 LPH','Heavy duty RO system','₹1,05,000')">
-    <img src="https://via.placeholder.com/400x300">
-    <div class="info">
-      <h3>Industrial RO 1000 LPH</h3>
-      <div class="price">₹1,05,000</div>
-    </div>
-  </div>
-
-</div>
 </section>
 
-<section id="services">
-<h2>Services</h2>
-<p style="text-align:center">Installation • AMC • Maintenance • Spare Parts</p>
+<!-- SERVICES -->
+<section id="services" style="background:#f4f7fb">
+  <div class="container">
+    <h2>Services</h2>
+    <p style="text-align:center">
+      Installation • AMC • Maintenance • Spare Parts
+    </p>
+  </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-<h2>About Us</h2>
-<p style="text-align:center">Trusted RO water solution provider across India.</p>
-</section>
-
-<section id="contact">
-<h2>Request Demo</h2>
-<div class="form-box">
-  <label>Name</label>
-  <input>
-  <label>Mobile</label>
-  <input>
-  <label>Product</label>
-  <select>
-    <option>Commercial RO</option>
-    <option>Industrial RO</option>
-  </select>
-  <button>Submit</button>
-</div>
-</section>
-
-<footer>© AquaSurely – RO Water Solutions</footer>
-
-<!-- POPUP -->
-<div class="modal" id="popup">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">×</span>
-    <h3 id="pTitle"></h3>
-    <p id="pDesc"></p>
-    <p class="price" id="pPrice"></p>
+  <div class="container">
+    <h2>About AquaSurely</h2>
+    <p style="text-align:center">
+      Trusted RO water solutions for homes, hotels & industries.
+    </p>
   </div>
-</div>
+</section>
 
-<script>
-/* ACTIVE TAB */
-const sections=document.querySelectorAll("section");
-const links=document.querySelectorAll(".tab-link");
+<!-- CONTACT -->
+<section id="contact" style="background:#f4f7fb">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p style="text-align:center">
+      Call or WhatsApp us for free consultation.
+    </p>
+  </div>
+</section>
 
-window.addEventListener("scroll",()=>{
-  let current="";
-  sections.forEach(sec=>{
-    if(scrollY>=sec.offsetTop-100) current=sec.id;
-  });
-  links.forEach(l=>{
-    l.classList.remove("active");
-    if(l.getAttribute("href")==="#"+current) l.classList.add("active");
-  });
-});
-
-/* DROPDOWN */
-function toggleDropdown(e){
-  e.stopPropagation();
-  document.getElementById("dropdownMenu").classList.toggle("show");
-}
-function closeDropdown(){
-  document.getElementById("dropdownMenu").classList.remove("show");
-}
-document.addEventListener("click",()=>{
-  document.getElementById("dropdownMenu").classList.remove("show");
-});
-
-/* PRODUCT MODAL */
-function openModal(t,d,p){
-  popup.style.display="block";
-  pTitle.innerText=t;
-  pDesc.innerText=d;
-  pPrice.innerText=p;
-}
-function closeModal(){
-  popup.style.display="none";
-}
-</script>
+<footer>
+  © 2026 AquaSurely – RO Water Solutions
+</footer>
 
 </body>
 </html>
