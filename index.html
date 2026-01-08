@@ -9,7 +9,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{color:#222}
 
-/* ===== NAVBAR ===== */
+/* ===== HEADER ===== */
 header{
   position:fixed;
   top:0;
@@ -22,8 +22,8 @@ header{
   max-width:1200px;
   margin:auto;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   padding:14px 20px;
 }
 .logo{
@@ -41,10 +41,8 @@ header{
   font-weight:600;
   position:relative;
 }
-.menu a.active,
-.menu a:hover{
-  color:#0077b6;
-}
+.menu a:hover,
+.menu a.active{color:#0077b6}
 .menu a.active::after{
   content:"";
   position:absolute;
@@ -60,9 +58,9 @@ header{
   top:28px;
   left:0;
   background:#fff;
-  box-shadow:0 6px 20px rgba(0,0,0,.15);
-  display:none;
   min-width:200px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+  display:none;
   border-radius:6px;
 }
 .dropdown-content a{
@@ -70,25 +68,21 @@ header{
   padding:12px 16px;
   color:#222;
 }
-.dropdown-content a:hover{
-  background:#f2f7fb;
-}
-.dropdown:hover .dropdown-content{
-  display:block;
-}
+.dropdown-content a:hover{background:#f2f7fb}
+.dropdown:hover .dropdown-content{display:block}
 
 /* ===== HERO ===== */
 .hero{
   margin-top:72px;
   height:65vh;
-  background:url("Images/banner.jpg") center/cover no-repeat;
+  background:url("banner.jpg") center/cover no-repeat;
   position:relative;
 }
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.45);
+  background:rgba(0,0,0,.5);
 }
 .hero-content{
   position:relative;
@@ -156,6 +150,7 @@ footer .container{
   grid-template-columns:1fr 1fr;
   gap:20px;
 }
+
 @media(max-width:768px){
   .hero h1{font-size:32px}
   footer .container{grid-template-columns:1fr;text-align:center}
@@ -170,18 +165,18 @@ footer .container{
   <div class="nav">
     <div class="logo">AquaSurely</div>
     <div class="menu">
-      <a href="#" class="active">Home</a>
+      <a href="index.html" class="active">Home</a>
 
       <div class="dropdown">
         <a href="#">Water Purifiers ▾</a>
         <div class="dropdown-content">
-          <a href="#products">Commercial RO</a>
-          <a href="#products">Industrial RO</a>
-          <a href="#products">RO Membrane</a>
+          <a href="products.html">Commercial RO</a>
+          <a href="products.html">Industrial RO</a>
+          <a href="products.html">RO Membrane</a>
         </div>
       </div>
 
-      <a href="#products">Products</a>
+      <a href="products.html">Products</a>
       <a href="#services">Services</a>
       <a href="#about">About Us</a>
       <a href="#contact">Contact Us</a>
@@ -202,13 +197,12 @@ footer .container{
 <!-- ===== PRODUCTS ===== -->
 <section id="products">
   <div class="container">
-    <h2>Our RO Plants</h2>
-    <br>
+    <h2>Our RO Plants</h2><br>
 
     <div class="products">
 
       <div class="card">
-        <img src="Images/ro-500.jpg">
+        <img src="ro-500.jpg">
         <div class="card-body">
           <h3>Commercial RO – 500 LPH</h3>
           <div class="price">
@@ -219,7 +213,7 @@ footer .container{
       </div>
 
       <div class="card">
-        <img src="Images/ro-1000.jpg">
+        <img src="ro-1000.jpg">
         <div class="card-body">
           <h3>Industrial RO – 1000 LPH</h3>
           <div class="price">
@@ -230,7 +224,7 @@ footer .container{
       </div>
 
       <div class="card">
-        <img src="Images/ro-2000.jpg">
+        <img src="ro-2000.jpg">
         <div class="card-body">
           <h3>Industrial RO – 2000 LPH</h3>
           <div class="price">
@@ -241,7 +235,7 @@ footer .container{
       </div>
 
       <div class="card">
-        <img src="Images/ro-3000.jpg">
+        <img src="ro-3000.jpg">
         <div class="card-body">
           <h3>Industrial RO – 3000 LPH</h3>
           <div class="price">
@@ -260,7 +254,7 @@ footer .container{
   <div class="container">
     <h2>About AquaSurely</h2>
     <p>
-      AquaSurely is a trusted supplier of commercial and industrial RO plants across India.
+      AquaSurely is a trusted supplier of commercial and industrial RO plants in India.
       We provide installation, AMC, maintenance and genuine spare parts.
     </p>
   </div>
