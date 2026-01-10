@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aquasurely.in/sitemap.xml
 
