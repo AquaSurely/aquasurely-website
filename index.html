@@ -1,278 +1,822 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <title>Commercial & Industrial RO Plant Supplier in India | AquaSurely</title>
-
-<meta name="description" content="AquaSurely is a trusted Commercial & Industrial RO Plant supplier in Delhi NCR & India. 500 LPH to 3000 LPH RO Plants with installation, AMC, maintenance & wholesale supply.">
+<meta name="description" content="AquaSurely is a trusted Commercial & Industrial RO Plant supplier in Delhi NCR & India. 500–3000 LPH RO Plants with installation, AMC, maintenance & wholesale supply.">
 <meta name="keywords" content="Industrial RO Plant, Commercial RO Plant, RO Plant Supplier Delhi NCR, RO Plant Noida, RO Plant Gurgaon, Reverse Osmosis Plant">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aquasurely.in/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#f5f7fb;color:#222}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body{background:#f5f7fb;color:#111;line-height:1.5}
 
-/* HEADER */
+/* COLORS / THEME (DrinkPrime-like but AquaSurely brand) */
+:root{
+  --primary:#0056ff;
+  --primary-dark:#003bcc;
+  --accent:#00c4ff;
+  --bg:#f5f7fb;
+  --card-bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --success:#16a34a;
+}
+
+/* TOP STRIP */
+.top-strip{
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:#fff;
+  text-align:center;
+  font-size:13px;
+  padding:6px 10px;
+}
+.top-strip b{font-weight:700}
+
+/* HEADER / NAV */
 header{
-position:sticky;top:0;z-index:999;
-background:#ffffff;
-box-shadow:0 4px 20px rgba(0,0,0,.08)
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  box-shadow:0 1px 10px rgba(15,23,42,.08);
 }
 .navbar{
-max-width:1200px;margin:auto;
-padding:14px 20px;
-display:flex;justify-content:space-between;align-items:center
+  max-width:1120px;
+  margin:auto;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
-.logo{display:flex;align-items:center;gap:14px}
-.logo img{height:60px}
-.logo-text b{font-size:24px;color:#0066ff}
-.logo-text span{font-size:13px;color:#0099ff;font-weight:bold}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo img{
+  height:44px;
+}
+.logo-text b{
+  font-size:20px;
+  color:var(--primary);
+}
+.logo-text span{
+  font-size:11px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-weight:600;
+}
 nav a{
-margin-left:28px;
-text-decoration:none;
-color:#333;
-font-weight:600
+  margin-left:20px;
+  font-size:14px;
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
+}
+nav a:hover{
+  color:var(--primary);
 }
 
 /* HERO */
 .hero{
-background:
-linear-gradient(90deg,#0b3cff,#0066ff),
-url("banner.jpg") center/cover no-repeat;
-padding:90px 20px;
-color:#fff
+  background:#0b1120;
+  color:#fff;
 }
-.hero-wrap{
-max-width:1200px;margin:auto;
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:40px;
-align-items:center
+.hero-inner{
+  max-width:1120px;
+  margin:auto;
+  padding:30px 16px 40px;
+  display:grid;
+  grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+  gap:26px;
+  align-items:center;
 }
-.hero h1{font-size:44px;margin-bottom:16px}
-.hero p{font-size:18px;margin-bottom:28px;line-height:1.5}
+.hero-left small{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:11px;
+  background:rgba(15,23,42,.9);
+  border:1px solid rgba(148,163,184,.6);
+  margin-bottom:10px;
+}
+.hero-left small span.badge{
+  background:rgba(52,211,153,.15);
+  border-radius:999px;
+  padding:2px 8px;
+  font-size:10px;
+  color:#4ade80;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.hero h1{
+  font-size:32px;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+.hero h1 span{
+  color:var(--accent);
+}
+.hero p.sub{
+  font-size:14px;
+  color:#e5e7eb;
+  margin-bottom:18px;
+}
+.hero-highlights{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  font-size:12px;
+  margin-bottom:18px;
+}
+.hero-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(15,23,42,.9);
+  border:1px solid rgba(148,163,184,.7);
+}
+.hero-pill span.icon{
+  font-size:15px;
+}
+.hero-cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:14px;
+}
 .btn{
-display:inline-block;
-padding:14px 28px;
-border-radius:8px;
-font-weight:bold;
-text-decoration:none;
-margin-right:12px
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:11px 18px;
+  border-radius:999px;
+  border:none;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  transition:.15s;
 }
-.call{background:#fff;color:#0066ff}
-.wa{background:#25d366;color:#fff}
+.btn-primary{
+  background:var(--primary);
+  color:#fff;
+}
+.btn-primary:hover{
+  background:var(--primary-dark);
+}
+.btn-outline{
+  background:transparent;
+  color:#e5e7eb;
+  border:1px solid rgba(148,163,184,.7);
+}
+.btn-outline:hover{
+  background:rgba(15,23,42,.9);
+}
+.hero-trust{
+  font-size:11px;
+  color:#9ca3af;
+}
 
-/* RIGHT CARD (DrinkPrime Inspired) */
+.hero-right{
+  position:relative;
+}
 .hero-card{
-background:#fff;
-color:#222;
-padding:30px;
-border-radius:18px;
-box-shadow:0 10px 40px rgba(0,0,0,.25)
+  position:relative;
+  background:radial-gradient(circle at top,var(--primary) 0,#020617 55%);
+  border-radius:20px;
+  padding:18px 18px 20px;
+  box-shadow:0 24px 60px rgba(15,23,42,.6);
+  overflow:hidden;
 }
-.hero-card h3{
-font-size:22px;
-margin-bottom:10px;
-color:#0066ff
+.hero-card-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  font-size:12px;
+  color:#e5e7eb;
 }
-.hero-card p{
-font-size:14px;
-margin-bottom:14px;
-color:#555
+.hero-card-header b{
+  font-size:14px;
 }
-.hero-card input{
-width:100%;
-padding:14px;
-margin-bottom:12px;
-border-radius:8px;
-border:1px solid #ddd
+.hero-card-chip{
+  font-size:10px;
+  padding:4px 9px;
+  border-radius:999px;
+  background:rgba(15,23,42,.8);
+  border:1px solid rgba(148,163,184,.6);
 }
-.hero-card button{
-width:100%;
-padding:14px;
-background:#0066ff;
-color:#fff;
-border:none;
-border-radius:10px;
-font-size:16px;
-font-weight:bold;
-cursor:pointer
+.hero-device{
+  width:100%;
+  height:220px;
+  border-radius:16px;
+  background:#020617 url("hero-unit.png") center/cover no-repeat;
+  box-shadow:0 16px 40px rgba(15,23,42,.8);
+  margin-bottom:10px;
 }
-.hero-card ul{
-margin-top:14px;
-list-style:none;
-font-size:14px
+.hero-card-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:11px;
+  color:#e5e7eb;
 }
-.hero-card li{margin-bottom:6px}
+.hero-card-footer span.label{
+  color:#9ca3af;
+}
+.hero-card-footer b{
+  font-size:13px;
+}
 
-/* SECTION */
+/* HIGHLIGHT STRIP */
+.highlight-strip{
+  background:#020617;
+  color:#e5e7eb;
+}
+.highlight-inner{
+  max-width:1120px;
+  margin:auto;
+  padding:10px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  justify-content:space-between;
+  font-size:11px;
+}
+.highlight-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.highlight-item span.icon{
+  font-size:18px;
+}
+
+/* GENERIC SECTION */
 section{
-max-width:1200px;
-margin:80px auto;
-padding:0 20px
+  max-width:1120px;
+  margin:26px auto;
+  padding:0 16px;
 }
-h2{
-text-align:center;
-font-size:34px;
-margin-bottom:30px;
-color:#0066ff
+.section-title{
+  font-size:22px;
+  margin-bottom:6px;
+  color:var(--text);
+}
+.section-sub{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:18px;
 }
 
-/* CARDS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:26px
+/* 3 COLUMN GRID */
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
 }
 .card{
-background:#fff;
-border-radius:16px;
-padding:26px;
-box-shadow:0 10px 30px rgba(0,0,0,.08)
+  background:var(--card-bg);
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 12px 30px rgba(148,163,184,.18);
+  border:1px solid rgba(226,232,240,.8);
 }
-.card img{
-width:100%;
-height:200px;
-object-fit:contain
+.card h3{
+  font-size:16px;
+  margin-bottom:6px;
 }
-
-/* BOX */
-.box{
-background:#ffffff;
-padding:50px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08)
+.card p{
+  font-size:13px;
+  color:var(--muted);
 }
 
-/* FORM */
+/* PLANS STYLE (for plant capacities) */
+.plans{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+.plan-card{
+  background:#020617;
+  color:#e5e7eb;
+  border-radius:18px;
+  padding:16px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 22px 45px rgba(15,23,42,.5);
+}
+.plan-card.highlight{
+  border:1px solid var(--accent);
+}
+.plan-tag{
+  position:absolute;
+  top:10px;
+  right:12px;
+  font-size:10px;
+  padding:3px 8px;
+  border-radius:999px;
+  background:rgba(56,189,248,.18);
+  color:#e0f2fe;
+  border:1px solid rgba(56,189,248,.6);
+}
+.plan-title{
+  font-size:16px;
+  margin-bottom:4px;
+}
+.plan-sub{
+  font-size:12px;
+  color:#9ca3af;
+  margin-bottom:10px;
+}
+.plan-meta{
+  font-size:11px;
+  color:#9ca3af;
+  margin-bottom:10px;
+}
+.plan-meta span{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  margin-right:10px;
+}
+.plan-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+}
+
+/* WHY US */
+.benefits-list{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:10px;
+  font-size:13px;
+}
+.benefits-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#e0f2fe33;
+}
+.benefits-list span.icon{
+  font-size:18px;
+  color:var(--success);
+}
+
+/* FAQ */
+.faq{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+}
+.faq-item{
+  background:#fff;
+  border-radius:14px;
+  padding:12px 14px;
+  border:1px solid #e5e7eb;
+}
+.faq-q{
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+.faq-a{
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* FORM / CTA */
+.form-section{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  gap:18px;
+  align-items:flex-start;
+}
+.form-card{
+  background:#fff;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 16px 40px rgba(148,163,184,.3);
+  border:1px solid #e5e7eb;
+}
 form input,form textarea{
-width:100%;
-padding:14px;
-margin-bottom:14px;
-border-radius:8px;
-border:1px solid #ccc
+  width:100%;
+  padding:11px 10px;
+  margin-bottom:10px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  font-size:13px;
+}
+form textarea{
+  min-height:80px;
+  resize:vertical;
 }
 form button{
-background:#0066ff;
-color:#fff;
-padding:15px;
-border:none;
-border-radius:10px;
-width:100%;
-font-size:17px;
-font-weight:bold
+  width:100%;
+  padding:11px;
+  border-radius:999px;
+  border:none;
+  font-size:14px;
+  font-weight:600;
+  background:var(--primary);
+  color:#fff;
+  cursor:pointer;
+  transition:.15s;
+}
+form button:hover{
+  background:var(--primary-dark);
+}
+.form-note{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.form-side{
+  font-size:13px;
+  color:var(--muted);
+}
+.form-side h3{
+  font-size:16px;
+  margin-bottom:6px;
+  color:var(--text);
+}
+.form-side ul{
+  margin-top:6px;
+  list-style:none;
+}
+.form-side li{
+  display:flex;
+  gap:8px;
+  margin-bottom:6px;
 }
 
 /* SERVICE AREAS */
 .service-areas{
-background:#eef3ff;
-padding:60px 20px;
-border-radius:22px
+  background:#020617;
+  color:#e5e7eb;
+  padding:24px 0;
+  margin-top:10px;
 }
-.service-areas ul{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
-list-style:none
+.service-inner{
+  max-width:1120px;
+  margin:auto;
+  padding:0 16px;
 }
-.service-areas a{
-display:block;
-padding:16px;
-background:#fff;
-border-radius:14px;
-text-align:center;
-font-weight:600;
-color:#0066ff;
-box-shadow:0 6px 20px rgba(0,0,0,.08)
+.service-title{
+  font-size:16px;
+  margin-bottom:8px;
+}
+.service-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.service-tags a{
+  font-size:11px;
+  padding:6px 10px;
+  border-radius:999px;
+  text-decoration:none;
+  background:rgba(15,23,42,.9);
+  border:1px solid rgba(148,163,184,.7);
+  color:#e5e7eb;
 }
 
 /* FOOTER */
 footer{
-background:#0b2545;
-color:#cfd8e3;
-padding:40px 20px;
-text-align:center
+  background:#020617;
+  color:#9ca3af;
+  text-align:center;
+  padding:12px 16px 18px;
+  font-size:12px;
 }
-footer b{color:#fff}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-padding:18px;
-border-radius:50%;
-font-size:24px;
-box-shadow:0 10px 30px rgba(0,0,0,.3)
+footer b{
+  color:#f9fafb;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-.hero-wrap{grid-template-columns:1fr}
-.hero h1{font-size:34px}
+/* FLOATING WHATSAPP & CALL */
+.floating-actions{
+  position:fixed;
+  bottom:16px;
+  right:16px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:999;
+}
+.float-btn{
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  color:#fff;
+  box-shadow:0 12px 30px rgba(15,23,42,.4);
+  text-decoration:none;
+}
+.float-wa{
+  background:#25d366;
+}
+.float-call{
+  background:var(--primary);
+}
+@media(max-width:880px){
+  .hero-inner{
+    grid-template-columns:1fr;
+    padding-bottom:30px;
+  }
+  .hero-right{order:-1;}
+  .form-section{
+    grid-template-columns:1fr;
+  }
+}
+@media(max-width:640px){
+  .navbar{padding:10px 12px;}
+  nav{display:none;} /* simple for LP */
+  .hero h1{font-size:24px;}
+  .highlight-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<div class="top-strip">
+  <b>Limited slots</b> for RO Plant installation in Delhi NCR this week. Book a free site visit now.
+</div>
+
 <header>
-<div class="navbar">
-<div class="logo">
-<img src="logo-aquasurely.png">
-<div class="logo-text">
-<b>AquaSurely</b><br>
-<span>Trust Every Drop</span>
-</div>
-</div>
-<nav>
-<a href="/">Home</a>
-<a href="/products.html">Products</a>
-<a href="#contact">Contact</a>
-</nav>
-</div>
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo-aquasurely.png" alt="AquaSurely logo">
+      <div class="logo-text">
+        <b>AquaSurely</b><br>
+        <span>Industrial RO Experts</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#plants">Plants</a>
+      <a href="#why">Why Us</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-<div class="hero-wrap">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <small><span class="badge">Industrial RO</span> 500–3000 LPH plants for factories, hotels, hospitals & more</small>
+      <h1>Get a high‑performance <span>Commercial & Industrial RO Plant</span> for your facility in Delhi NCR.</h1>
+      <p class="sub">Custom‑designed RO systems with professional installation, genuine membranes and complete AMC support for consistent water quality.</p>
 
-<div>
-<h1>Commercial & Industrial RO Plant Supplier</h1>
-<p>500 LPH – 3000 LPH RO Plants | Installation | AMC | Wholesale Supply</p>
-<a href="tel:+919650548432" class="btn call">Call Now</a>
-<a href="https://wa.me/919650548432" class="btn wa">WhatsApp</a>
-</div>
+      <div class="hero-highlights">
+        <div class="hero-pill"><span class="icon">✅</span> 10+ years experience</div>
+        <div class="hero-pill"><span class="icon">🏭</span> 500+ industrial installations</div>
+        <div class="hero-pill"><span class="icon">⚙️</span> 500–3000 LPH capacities</div>
+      </div>
 
-<div class="hero-card">
-<h3>Get Free RO Quotation</h3>
-<p>Trusted by industries across Delhi NCR</p>
-<form action="https://formsubmit.co/surelyaqua@gmail.com" method="POST">
-<input type="hidden" name="_next" value="https://aquasurely.in/thank-you.html">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<input type="email" name="email" placeholder="Email">
-<button type="submit">Request Call Back</button>
-</form>
-<ul>
-<li>✔ Zero consultation cost</li>
-<li>✔ Fast installation</li>
-<li>✔ AMC & support</li>
-</ul>
-</div>
+      <div class="hero-cta">
+        <a href="tel:+919650548432" class="btn btn-primary">📞 Talk to RO Expert</a>
+        <a href="#contact" class="btn btn-outline">📋 Get free quotation</a>
+      </div>
 
-</div>
+      <div class="hero-trust">
+        Service available across Delhi, Noida, Gurgaon & Faridabad. Installation, commissioning & long‑term maintenance handled by in‑house team.
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div>
+            <div style="font-size:11px;color:#9ca3af;">Commercial & Industrial RO Plant</div>
+            <b>AquaSurely 1000–3000 LPH</b>
+          </div>
+          <div class="hero-card-chip">Real‑time TDS & flow‑based design</div>
+        </div>
+        <div class="hero-device"></div>
+        <div class="hero-card-footer">
+          <div>
+            <span class="label">RO Capacity</span><br>
+            <b>500 / 1000 / 2000 / 3000 LPH</b>
+          </div>
+          <div>
+            <span class="label">Typical Uses</span><br>
+            <b>Factories, Hotels, Hospitals, Schools</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- REST OF YOUR CONTENT (UNCHANGED STRUCTURE) -->
-<!-- About, What We Provide, Why Choose Us, Products, Reviews, Form, Service Areas, Footer -->
+<!-- HIGHLIGHT STRIP -->
+<div class="highlight-strip">
+  <div class="highlight-inner">
+    <div class="highlight-item"><span class="icon">🧪</span><span>Custom RO design based on input water test</span></div>
+    <div class="highlight-item"><span class="icon">🚚</span><span>Fast delivery & installation in Delhi NCR</span></div>
+    <div class="highlight-item"><span class="icon">🔧</span><span>AMC & breakdown support by trained engineers</span></div>
+    <div class="highlight-item"><span class="icon">📞</span><span>Single contact for sales, service & spares</span></div>
+  </div>
+</div>
 
-<a href="https://wa.me/919650548432" class="whatsapp-float">💬</a>
+<!-- WHAT WE PROVIDE -->
+<section id="plants">
+  <h2 class="section-title">RO Plants for every industrial need</h2>
+  <p class="section-sub">Choose from a range of commercial & industrial RO plants, engineered for continuous, reliable operation.</p>
+
+  <div class="plans">
+    <div class="plan-card">
+      <div class="plan-tag">Most installed</div>
+      <div class="plan-title">500 LPH RO Plant</div>
+      <div class="plan-sub">Ideal for small industries, schools, clinics & canteens.</div>
+      <div class="plan-meta">
+        <span>💧 500 LPH @ consistent TDS</span>
+        <span>⚙️ FRP / SS options</span>
+      </div>
+      <div class="plan-footer">
+        <span>Perfect for <b>daily 2000–3000 L</b> usage</span>
+        <a href="#contact" style="color:#93c5fd;text-decoration:none;">Get quote →</a>
+      </div>
+    </div>
+
+    <div class="plan-card highlight">
+      <div class="plan-tag">Popular for factories</div>
+      <div class="plan-title">1000–2000 LPH RO Plant</div>
+      <div class="plan-sub">Designed for medium to large manufacturing units, hotels & hospitals.</div>
+      <div class="plan-meta">
+        <span>🏭 24×7 operation ready</span>
+        <span>🧪 Multi‑stage filtration</span>
+      </div>
+      <div class="plan-footer">
+        <span>Handles <b>5000–15000 L</b> per day easily</span>
+        <a href="#contact" style="color:#93c5fd;text-decoration:none;">Schedule site visit →</a>
+      </div>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-tag">Project plants</div>
+      <div class="plan-title">3000 LPH RO Plant</div>
+      <div class="plan-sub">High‑capacity systems for large facilities & centralized water treatment.</div>
+      <div class="plan-meta">
+        <span>📦 Skid‑mounted solutions</span>
+        <span>🛠️ Custom automation</span>
+      </div>
+      <div class="plan-footer">
+        <span>Best for <b>industrial clusters & townships</b></span>
+        <a href="#contact" style="color:#93c5fd;text-decoration:none;">Discuss project →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE AQUASURELY -->
+<section id="why">
+  <h2 class="section-title">Why industrial clients choose AquaSurely</h2>
+  <p class="section-sub">End‑to‑end RO solutions from design to installation and long‑term maintenance, tailored to your process requirements.</p>
+
+  <ul class="benefits-list">
+    <li><span class="icon">🧪</span><span>Customized RO design based on inlet water analysis, TDS and required output quality.</span></li>
+    <li><span class="icon">👨‍🔧</span><span>Experienced RO engineers & technicians for installation, commissioning & on‑site training.</span></li>
+    <li><span class="icon">⚡</span><span>Energy‑efficient, low‑wastage systems designed for continuous industrial duty.</span></li>
+    <li><span class="icon">🧩</span><span>Genuine membranes, pumps and components for longer system life and stable performance.</span></li>
+    <li><span class="icon">📍</span><span>Fast service response across Delhi, Noida, Gurgaon & Faridabad.</span></li>
+    <li><span class="icon">📊</span><span>Transparent costing, clear AMC plans and predictable operating expenses.</span></li>
+  </ul>
+</section>
+
+<!-- CLIENT QUOTES -->
+<section>
+  <h2 class="section-title">Trusted by facilities across Delhi NCR</h2>
+  <p class="section-sub">AquaSurely RO plants are running in manufacturing units, hotels, hospitals and institutions with consistent performance.</p>
+
+  <div class="grid-3">
+    <div class="card">
+      <h3>Manufacturing Unit – Faridabad</h3>
+      <p>“Our production line needs reliable process water. AquaSurely’s 2000 LPH plant has been running smoothly with timely service support.”</p>
+    </div>
+    <div class="card">
+      <h3>Hotel – Gurgaon</h3>
+      <p>“Kitchen and guest areas rely on their RO system. The team handles AMC proactively, so we don’t face downtime.”</p>
+    </div>
+    <div class="card">
+      <h3>Hospital – Noida</h3>
+      <p>“We needed consistent water quality for critical applications. AquaSurely delivered both design and execution as per our requirement.”</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2 class="section-title">Frequently asked questions</h2>
+  <p class="section-sub">Common queries from factories, hotels, hospitals and commercial buildings planning an RO plant.</p>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">Which RO capacity is right for my facility?</div>
+      <div class="faq-a">Capacity depends on your daily water requirement, peak load, input water quality and application. Share basic details and our team will recommend a suitable 500–3000 LPH plant.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you provide installation and commissioning?</div>
+      <div class="faq-a">Yes. AquaSurely provides complete installation, commissioning and operator briefing. Civil and electrical readiness guidelines are shared in advance.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is AMC mandatory for the RO plant?</div>
+      <div class="faq-a">AMC is strongly recommended for industrial systems to ensure membrane life, pump health and consistent output quality. We offer flexible AMC options.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you supply outside Delhi NCR?</div>
+      <div class="faq-a">Yes, plants can be supplied and supported across India for projects and bulk requirements. For service‑intensive installations, Delhi NCR is prioritized.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / ENQUIRY -->
+<section id="contact">
+  <div class="form-section">
+    <div class="form-card">
+      <h2 class="section-title">Get a free RO plant quotation</h2>
+      <p class="section-sub">Share your requirement and an AquaSurely RO specialist will call you within 24 hours.</p>
+
+      <form action="https://formsubmit.co/surelyaqua@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://aquasurely.in/thank-you.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Work Email (optional)">
+        <textarea name="requirement" placeholder="Tell us about your requirement (capacity, application, city)"></textarea>
+        <button type="submit">Submit enquiry</button>
+
+        <div class="form-note">By submitting this form, you agree to be contacted by AquaSurely over phone, WhatsApp or email regarding RO plant solutions.</div>
+      </form>
+    </div>
+
+    <div class="form-side">
+      <h3>Need urgent assistance?</h3>
+      <p>Reach our team directly for quick discussions on feasibility, rough costing and timelines.</p>
+      <ul>
+        <li>📞 <b>+91 9650548432</b> (Call / WhatsApp)</li>
+        <li>✉️ surelyaqua@gmail.com</li>
+        <li>🏭 Commercial & Industrial RO Plant Supplier – India</li>
+      </ul>
+
+      <h3 style="margin-top:14px;">Typical implementation steps</h3>
+      <ul>
+        <li>• Basic requirement discussion & water test (if needed)</li>
+        <li>• Technical proposal & commercial offer</li>
+        <li>• Plant fabrication, delivery & installation</li>
+        <li>• Commissioning, testing & handover with training</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<div class="service-areas">
+  <div class="service-inner">
+    <div class="service-title">Fast installation support in these locations</div>
+    <div class="service-tags">
+      <a href="/industrial-ro-plant-delhi.html">Industrial RO Plant in Delhi</a>
+      <a href="/industrial-ro-plant-noida.html">Industrial RO Plant in Noida</a>
+      <a href="/industrial-ro-plant-gurgaon.html">Industrial RO Plant in Gurgaon</a>
+      <a href="/industrial-ro-plant-faridabad.html">Industrial RO Plant in Faridabad</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p><b>AquaSurely</b></p>
+  <p>📞 +91 9650548432 | ✉️ surelyaqua@gmail.com</p>
+  <p>Commercial & Industrial RO Plant Supplier – India</p>
+</footer>
+
+<!-- FLOATING ACTION BUTTONS -->
+<div class="floating-actions">
+  <a href="tel:+919650548432" class="float-btn float-call">📞</a>
+  <a href="https://wa.me/919650548432" class="float-btn float-wa">💬</a>
+</div>
 
 </body>
 </html>
