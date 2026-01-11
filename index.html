@@ -90,19 +90,20 @@ nav a:hover{
   margin:0 auto;
   padding:30px 16px 40px;
   display:grid;
-  grid-template-columns:1.1fr 1.1fr;
-  gap:30px;
+  grid-template-columns:1.25fr 1.1fr; /* left text box thoda bada */
+  gap:26px;
   align-items:flex-start;
 }
 
-/* LEFT: TEXT + FORM */
-.hero-left{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
+/* LEFT: TEXT ONLY BOX */
+.hero-left-card{
+  background:#020617;
+  border-radius:24px;
+  padding:24px 22px 22px;
+  box-shadow:0 22px 55px rgba(15,23,42,.7);
+  border:1px solid #111827;
 }
-.hero-copy{}
-.hero-left small{
+.hero-left-card small{
   display:inline-flex;
   align-items:center;
   gap:8px;
@@ -113,7 +114,7 @@ nav a:hover{
   border:1px solid rgba(148,163,184,.6);
   margin-bottom:10px;
 }
-.hero-left small span.badge{
+.hero-left-card small span.badge{
   background:rgba(52,211,153,.15);
   border-radius:999px;
   padding:2px 8px;
@@ -122,13 +123,13 @@ nav a:hover{
   text-transform:uppercase;
   letter-spacing:.05em;
 }
-.hero h1{
+.hero-left-card h1{
   font-size:32px;
   line-height:1.2;
   margin-bottom:12px;
 }
-.hero h1 span{color:var(--accent);}
-.hero p.sub{
+.hero-left-card h1 span{color:var(--accent);}
+.hero-left-card p.sub{
   font-size:14px;
   color:#e5e7eb;
   margin-bottom:18px;
@@ -186,13 +187,63 @@ nav a:hover{
   color:#9ca3af;
 }
 
-/* FORM CARD */
+/* RIGHT: DEVICE CARD + FORM AS SEPARATE BOXES */
+.hero-right{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  align-items:stretch;
+}
+
+/* DEVICE CARD */
+.hero-card{
+  background:radial-gradient(circle at top,var(--primary) 0,#020617 55%);
+  border-radius:20px;
+  padding:18px 18px 20px;
+  box-shadow:0 24px 60px rgba(15,23,42,.6);
+  overflow:hidden;
+}
+.hero-card-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  font-size:12px;
+  color:#e5e7eb;
+}
+.hero-card-header b{font-size:14px;}
+.hero-card-chip{
+  font-size:10px;
+  padding:4px 9px;
+  border-radius:999px;
+  background:rgba(15,23,42,.8);
+  border:1px solid rgba(148,163,184,.6);
+}
+.hero-device{
+  width:100%;
+  height:200px;
+  border-radius:16px;
+  background:#020617 url("hero-unit.png") center/cover no-repeat;
+  box-shadow:0 16px 40px rgba(15,23,42,.8);
+  margin-bottom:10px;
+}
+.hero-card-footer{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  font-size:11px;
+  color:#e5e7eb;
+}
+.hero-card-footer span.label{color:#9ca3af;}
+.hero-card-footer b{font-size:13px;}
+
+/* FORM BOX (separate) */
 .hero-form-card{
   background:#020617;
-  border-radius:18px;
+  border-radius:20px;
   padding:20px 18px 18px;
-  box-shadow:0 18px 40px rgba(15,23,42,.7);
-  border:1px solid #1f2937;
+  box-shadow:0 20px 55px rgba(15,23,42,.75);
+  border:1px solid #111827;
 }
 .hero-form-card h2{
   font-size:20px;
@@ -241,54 +292,6 @@ nav a:hover{
   color:#9ca3af;
   margin-top:6px;
 }
-
-/* RIGHT: BLACK DEVICE CARD */
-.hero-right{
-  display:flex;
-  justify-content:flex-end;
-}
-.hero-card{
-  background:radial-gradient(circle at top,var(--primary) 0,#020617 55%);
-  border-radius:20px;
-  padding:18px 18px 20px;
-  box-shadow:0 24px 60px rgba(15,23,42,.6);
-  overflow:hidden;
-  max-width:430px;
-  margin-left:auto;
-}
-.hero-card-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:12px;
-  font-size:12px;
-  color:#e5e7eb;
-}
-.hero-card-header b{font-size:14px;}
-.hero-card-chip{
-  font-size:10px;
-  padding:4px 9px;
-  border-radius:999px;
-  background:rgba(15,23,42,.8);
-  border:1px solid rgba(148,163,184,.6);
-}
-.hero-device{
-  width:100%;
-  height:200px;
-  border-radius:16px;
-  background:#020617 url("hero-unit.png") center/cover no-repeat;
-  box-shadow:0 16px 40px rgba(15,23,42,.8);
-  margin-bottom:10px;
-}
-.hero-card-footer{
-  display:flex;
-  justify-content:space-between;
-  gap:16px;
-  font-size:11px;
-  color:#e5e7eb;
-}
-.hero-card-footer span.label{color:#9ca3af;}
-.hero-card-footer b{font-size:13px;}
 
 /* HIGHLIGHT STRIP */
 .highlight-strip{
@@ -419,6 +422,24 @@ section{
 .faq-q{font-size:13px;font-weight:600;margin-bottom:4px;}
 .faq-a{font-size:12px;color:var(--muted);}
 
+/* REVIEWS */
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+}
+.review-card{
+  background:#ffffff;
+  border-radius:16px;
+  padding:14px 14px 12px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 10px 25px rgba(148,163,184,.18);
+  font-size:13px;
+}
+.review-stars{color:#fbbf24;margin-bottom:6px;font-size:14px;}
+.review-name{margin-top:8px;font-weight:600;font-size:12px;color:#374151;}
+.review-tag{font-size:11px;color:#6b7280;}
+
 /* SERVICE AREAS */
 .service-areas{
   background:#020617;
@@ -487,12 +508,12 @@ footer b{color:#f9fafb;}
   .hero-inner{
     grid-template-columns:1fr;
   }
-  .hero-right{justify-content:center;margin-top:10px;}
+  .hero-right{margin-top:18px;}
 }
 @media(max-width:640px){
   .navbar{padding:10px 12px;}
   nav{display:none;}
-  .hero h1{font-size:24px;}
+  .hero-left-card h1{font-size:24px;}
   .highlight-inner{
     flex-direction:column;
     align-items:flex-start;
@@ -528,26 +549,48 @@ footer b{color:#f9fafb;}
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <!-- LEFT: text + form -->
-    <div class="hero-left">
-      <div class="hero-copy">
-        <small><span class="badge">Industrial RO</span> 500–3000 LPH plants for factories, hotels, hospitals & more</small>
-        <h1>Get a high‑performance <span>Commercial & Industrial RO Plant</span> for your facility in Delhi NCR.</h1>
-        <p class="sub">Custom‑designed RO systems with professional installation, genuine membranes and complete AMC support for consistent water quality.</p>
+    <!-- LEFT TEXT BOX -->
+    <div class="hero-left-card">
+      <small><span class="badge">Industrial RO</span> 500–3000 LPH plants for factories, hotels, hospitals & more</small>
+      <h1>Get a high‑performance <span>Commercial & Industrial RO Plant</span> for your facility in Delhi NCR.</h1>
+      <p class="sub">Custom‑designed RO systems with professional installation, genuine membranes and complete AMC support for consistent water quality.</p>
 
-        <div class="hero-highlights">
-          <div class="hero-pill"><span class="icon">✅</span> 10+ years experience</div>
-          <div class="hero-pill"><span class="icon">🏭</span> 500+ industrial installations</div>
-          <div class="hero-pill"><span class="icon">⚙️</span> 500–3000 LPH capacities</div>
+      <div class="hero-highlights">
+        <div class="hero-pill"><span class="icon">✅</span> 10+ years experience</div>
+        <div class="hero-pill"><span class="icon">🏭</span> 500+ industrial installations</div>
+        <div class="hero-pill"><span class="icon">⚙️</span> 500–3000 LPH capacities</div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="tel:+919650548432" class="btn btn-primary">📞 Talk to RO Expert</a>
+        <a href="#contact" class="btn btn-outline">📋 Get free quotation</a>
+      </div>
+
+      <div class="hero-trust">
+        Service available across Delhi, Noida, Gurgaon & Faridabad. Installation, commissioning & long‑term maintenance handled by in‑house team.
+      </div>
+    </div>
+
+    <!-- RIGHT: DEVICE BOX + FORM BOX -->
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div>
+            <div style="font-size:11px;color:#9ca3af;">Commercial & Industrial RO Plant</div>
+            <b>AquaSurely 1000–3000 LPH</b>
+          </div>
+          <div class="hero-card-chip">Real‑time TDS & flow‑based design</div>
         </div>
-
-        <div class="hero-cta">
-          <a href="tel:+919650548432" class="btn btn-primary">📞 Talk to RO Expert</a>
-          <a href="#contact" class="btn btn-outline">📋 Get free quotation</a>
-        </div>
-
-        <div class="hero-trust">
-          Service available across Delhi, Noida, Gurgaon & Faridabad. Installation, commissioning & long‑term maintenance handled by in‑house team.
+        <div class="hero-device"></div>
+        <div class="hero-card-footer">
+          <div>
+            <span class="label">RO Capacity</span><br>
+            <b>500 / 1000 / 2000 / 3000 LPH</b>
+          </div>
+          <div>
+            <span class="label">Typical Uses</span><br>
+            <b>Factories, Hotels, Hospitals, Schools</b>
+          </div>
         </div>
       </div>
 
@@ -570,30 +613,6 @@ footer b{color:#f9fafb;}
         </div>
       </div>
     </div>
-
-    <!-- RIGHT: black device card -->
-    <div class="hero-right">
-      <div class="hero-card">
-        <div class="hero-card-header">
-          <div>
-            <div style="font-size:11px;color:#9ca3af;">Commercial & Industrial RO Plant</div>
-            <b>AquaSurely 1000–3000 LPH</b>
-          </div>
-          <div class="hero-card-chip">Real‑time TDS & flow‑based design</div>
-        </div>
-        <div class="hero-device"></div>
-        <div class="hero-card-footer">
-          <div>
-            <span class="label">RO Capacity</span><br>
-            <b>500 / 1000 / 2000 / 3000 LPH</b>
-          </div>
-          <div>
-            <span class="label">Typical Uses</span><br>
-            <b>Factories, Hotels, Hospitals, Schools</b>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -607,10 +626,10 @@ footer b{color:#f9fafb;}
   </div>
 </div>
 
-<!-- PLANTS -->
+<!-- PLANTS WITH UPDATED PRICES -->
 <section id="plants">
   <h2 class="section-title">RO Plants for every industrial need</h2>
-  <p class="section-sub">Choose from a range of commercial & industrial RO plants, engineered for continuous, reliable operation.</p>
+  <p class="section-sub">Select capacity as per your daily usage and process requirement. Prices are indicative and can vary based on configuration.</p>
 
   <div class="plans">
     <div class="plan-card">
@@ -622,36 +641,50 @@ footer b{color:#f9fafb;}
         <span>⚙️ FRP / SS options</span>
       </div>
       <div class="plan-footer">
-        <span>Perfect for <b>daily 2000–3000 L</b> usage</span>
+        <span><b>₹ 95,000</b> (approx.)</span>
         <a href="#contact" style="color:#93c5fd;text-decoration:none;">Get quote →</a>
       </div>
     </div>
 
     <div class="plan-card highlight">
       <div class="plan-tag">Popular for factories</div>
-      <div class="plan-title">1000–2000 LPH RO Plant</div>
-      <div class="plan-sub">Designed for medium to large manufacturing units, hotels & hospitals.</div>
+      <div class="plan-title">1000 LPH RO Plant</div>
+      <div class="plan-sub">Designed for medium manufacturing units, hotels & hospitals.</div>
       <div class="plan-meta">
         <span>🏭 24×7 operation ready</span>
         <span>🧪 Multi‑stage filtration</span>
       </div>
       <div class="plan-footer">
-        <span>Handles <b>5000–15000 L</b> per day easily</span>
+        <span><b>₹ 1,40,000</b> (approx.)</span>
         <a href="#contact" style="color:#93c5fd;text-decoration:none;">Schedule site visit →</a>
+      </div>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-tag">High capacity</div>
+      <div class="plan-title">2000 LPH RO Plant</div>
+      <div class="plan-sub">For large manufacturing, bottling & institutional setups.</div>
+      <div class="plan-meta">
+        <span>📦 Skid‑mounted systems</span>
+        <span>🛠️ Custom automation</span>
+      </div>
+      <div class="plan-footer">
+        <span><b>₹ 2,40,000</b> (approx.)</span>
+        <a href="#contact" style="color:#93c5fd;text-decoration:none;">Discuss project →</a>
       </div>
     </div>
 
     <div class="plan-card">
       <div class="plan-tag">Project plants</div>
       <div class="plan-title">3000 LPH RO Plant</div>
-      <div class="plan-sub">High‑capacity systems for large facilities & centralized water treatment.</div>
+      <div class="plan-sub">High‑capacity central systems for industrial clusters & campuses.</div>
       <div class="plan-meta">
-        <span>📦 Skid‑mounted solutions</span>
-        <span>🛠️ Custom automation</span>
+        <span>🏢 Centralized water treatment</span>
+        <span>⚙️ Heavy‑duty components</span>
       </div>
       <div class="plan-footer">
-        <span>Best for <b>industrial clusters & townships</b></span>
-        <a href="#contact" style="color:#93c5fd;text-decoration:none;">Discuss project →</a>
+        <span><b>₹ 3,50,000</b> (approx.)</span>
+        <a href="#contact" style="color:#93c5fd;text-decoration:none;">Talk to expert →</a>
       </div>
     </div>
   </div>
@@ -713,6 +746,57 @@ footer b{color:#f9fafb;}
     <div class="faq-item">
       <div class="faq-q">Do you supply outside Delhi NCR?</div>
       <div class="faq-a">Yes, plants can be supplied and supported across India for projects and bulk requirements. For service‑intensive installations, Delhi NCR is prioritized.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAKE REVIEWS SECTION -->
+<section>
+  <h2 class="section-title">What our clients say</h2>
+  <p class="section-sub">Feedback from industries and institutions using AquaSurely RO plants for their daily operations.</p>
+
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>The 1000 LPH plant has stabilised our process water quality. Installation was quick and the team handled everything professionally.</p>
+      <div class="review-name">Manufacturing Unit</div>
+      <div class="review-tag">Bawana, Delhi</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>We rely on AquaSurely for kitchen and guest‑use water. Their AMC team visits on time and explains every service clearly.</p>
+      <div class="review-name">Business Hotel</div>
+      <div class="review-tag">Gurgaon</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>RO system runs 24×7 for our boiler and utility usage. Breakdown calls are attended quickly and spares are readily available.</p>
+      <div class="review-name">Textile Factory</div>
+      <div class="review-tag">Faridabad</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>Our institution needed safe drinking water for students and staff. AquaSurely guided us on capacity and storage design.</p>
+      <div class="review-name">Engineering College</div>
+      <div class="review-tag">Greater Noida</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>From water testing to commissioning, the project team was responsive. We are satisfied with TDS and overall plant performance.</p>
+      <div class="review-name">Multi‑speciality Hospital</div>
+      <div class="review-tag">Delhi NCR</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>Good quality components and neat installation. They also trained our operator thoroughly on routine checks and backwashing.</p>
+      <div class="review-name">Food Processing Unit</div>
+      <div class="review-tag">Noida</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>We procured a 3000 LPH plant for our campus. Output water quality and service support have both met expectations.</p>
+      <div class="review-name">Corporate Campus</div>
+      <div class="review-tag">Gurgaon</div>
     </div>
   </div>
 </section>
