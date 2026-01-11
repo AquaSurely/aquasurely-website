@@ -1,129 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
 
+<!-- BASIC SEO -->
+<meta charset="UTF-8">
 <title>Industrial RO Plant Supplier in Faridabad | AquaSurely</title>
 
-<meta name="description" content="AquaSurely is a trusted Industrial & Commercial RO Plant supplier in Faridabad, Haryana. 500 LPH, 1000 LPH, 2000 LPH & 3000 LPH RO plants with installation, AMC & service.">
-<meta name="keywords" content="Industrial RO Plant Faridabad, Commercial RO Plant Faridabad, RO Plant Supplier Faridabad, RO Plant AMC Faridabad">
+<meta name="description" content="AquaSurely is a trusted Industrial & Commercial RO Plant supplier in Faridabad. 500 LPH, 1000 LPH, 2000 LPH & 3000 LPH RO Plants with installation, AMC & service.">
+<meta name="keywords" content="Industrial RO Plant Faridabad, RO Plant Supplier Faridabad, 1000 LPH RO Plant Faridabad, Commercial RO Plant Faridabad">
 <meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://aquasurely.in/industrial-ro-plant-faridabad.html">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- ===== SAME CSS AS HOME PAGE ===== -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{color:#222;background:#fff}
-a{text-decoration:none}
+body{background:#fff;color:#222}
 
 /* HEADER */
 header{
-  background:linear-gradient(135deg,#007bff,#00b4ff);
-  color:#fff;
-  padding:60px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
-.header-inner{
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo img{
+  height:70px;
+}
+
+.logo-text b{
+  font-size:26px;
+  color:#007bff;
+}
+.logo-text span{
+  font-size:14px;
+  color:#0099ff;
+  font-weight:bold;
+}
+
+nav a{
+  margin-left:26px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+nav a:hover{color:#007bff}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("banner.jpg") center/cover no-repeat;
+  padding:120px 20px;
+  color:#fff;
+}
+
+.hero-inner{
   max-width:1200px;
   margin:auto;
 }
-header h1{font-size:42px;margin-bottom:12px}
-header p{font-size:18px;margin-bottom:24px}
+
+.hero h1{
+  font-size:46px;
+  margin-bottom:14px;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:28px;
+}
+
 .btn{
   display:inline-block;
   padding:14px 26px;
-  background:#25d366;
-  color:#fff;
   border-radius:6px;
   font-weight:bold;
+  text-decoration:none;
+  margin-right:12px;
 }
+
+.call{background:#fff;color:#007bff}
+.wa{background:#25d366;color:#fff}
 
 /* SECTION */
 section{
   max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
+  margin:70px auto;
+  padding:0 20px;
 }
-h2{color:#007bff;margin-bottom:16px}
+
+h2{
+  font-size:34px;
+  margin-bottom:25px;
+  color:#007bff;
+}
+
 .box{
   border:1px solid #e5e5e5;
   border-radius:12px;
-  padding:26px;
-  margin-bottom:24px;
-  box-shadow:0 6px 16px rgba(0,0,0,.06);
+  padding:25px;
+  margin-bottom:30px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
-ul{padding-left:18px}
-li{margin-bottom:8px}
 
-/* CTA */
-.cta{
-  background:#f2f9ff;
-  padding:40px 20px;
-  text-align:center;
+/* PRODUCTS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;
 }
-.cta h2{margin-bottom:12px}
+
+.card{
+  border:1px solid #e5e5e5;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:contain;
+  background:#f7f9fc;
+}
+
+.card .p{
+  padding:18px;
+}
+
+.price{color:#007bff;font-weight:bold}
 
 /* FOOTER */
 footer{
   background:#0b2545;
   color:#cfd8e3;
-  padding:30px 20px;
+  padding:40px 20px;
   text-align:center;
 }
 footer b{color:#fff}
 
 @media(max-width:768px){
-  header h1{font-size:30px}
+  .hero h1{font-size:34px}
+  nav a{margin-left:14px}
 }
 </style>
 
 <!-- SERVICE SCHEMA -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Service",
-  "serviceType":"Industrial & Commercial RO Plant Supplier",
-  "provider":{
-    "@type":"Organization",
-    "name":"AquaSurely",
-    "url":"https://aquasurely.in",
-    "telephone":"+91-9650548432",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Faridabad",
-      "addressRegion":"Haryana",
-      "addressCountry":"IN"
-    }
-  },
-  "areaServed":{
-    "@type":"AdministrativeArea",
-    "name":"Faridabad"
-  }
-}
-</script>
-
-<!-- FAQ SCHEMA -->
-<script type="application/ld+json">
-{
 "@context":"https://schema.org",
-"@type":"FAQPage",
-"mainEntity":[
-{
-"@type":"Question",
-"name":"Do you supply industrial RO plants in Faridabad?",
-"acceptedAnswer":{"@type":"Answer","text":"Yes, AquaSurely supplies and installs industrial and commercial RO plants across Faridabad, Haryana."}
-},
-{
-"@type":"Question",
-"name":"What RO plant capacities are available?",
-"acceptedAnswer":{"@type":"Answer","text":"We provide 500 LPH, 1000 LPH, 2000 LPH and 3000 LPH RO plants."}
-},
-{
-"@type":"Question",
-"name":"Do you provide AMC and RO maintenance in Faridabad?",
-"acceptedAnswer":{"@type":"Answer","text":"Yes, we offer complete AMC, repair, servicing and spare parts support in Faridabad."}
+"@type":"Service",
+"serviceType":"Industrial RO Plant Supplier",
+"provider":{
+"@type":"Organization",
+"name":"AquaSurely",
+"url":"https://aquasurely.in",
+"telephone":"+91-9650548432",
+"address":{
+"@type":"PostalAddress",
+"addressLocality":"Faridabad",
+"addressRegion":"Haryana",
+"addressCountry":"IN"
 }
-]
+},
+"areaServed":"Faridabad"
 }
 </script>
 
@@ -131,66 +188,88 @@ footer b{color:#fff}
 
 <body>
 
-<!-- HERO -->
+<!-- HEADER -->
 <header>
-  <div class="header-inner">
-    <h1>Industrial RO Plant Supplier in Faridabad</h1>
-    <p>Commercial & Industrial RO Solutions with Installation, AMC & Service</p>
-    <a class="btn" href="https://wa.me/919650548432">WhatsApp Enquiry</a>
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo-aquasurely.png" alt="AquaSurely">
+      <div class="logo-text">
+        <b>AquaSurely</b><br>
+        <span>Trust Every Drop</span>
+      </div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products.html">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
-<!-- CONTENT -->
-<section>
-  <h2>Industrial RO Plant Manufacturer in Faridabad</h2>
-  <p>
-    AquaSurely is a trusted <b>Industrial & Commercial RO Plant supplier in Faridabad</b>,
-    delivering high-performance reverse osmosis water treatment systems for
-    factories, hotels, hospitals, schools and industries.
-  </p>
-
-  <div class="box">
-    <h3>Available RO Plant Capacities</h3>
-    <ul>
-      <li>500 LPH Industrial RO Plant</li>
-      <li>1000 LPH Industrial RO Plant</li>
-      <li>2000 LPH Industrial RO Plant</li>
-      <li>3000 LPH Industrial RO Plant</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h3>Our RO Services in Faridabad</h3>
-    <ul>
-      <li>RO Plant Installation</li>
-      <li>Annual Maintenance Contract (AMC)</li>
-      <li>RO Plant Repair & Servicing</li>
-      <li>Wholesale RO Plants & Genuine Spare Parts</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h3>Why Choose AquaSurely?</h3>
-    <ul>
-      <li>10+ Years Industry Experience</li>
-      <li>Customized Water Treatment Solutions</li>
-      <li>Fast Faridabad & NCR Service Support</li>
-      <li>Wholesale & Project Supply Available</li>
-    </ul>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Industrial RO Plant Supplier in Faridabad</h1>
+    <p>Commercial & Industrial RO Solutions with Installation, AMC & Service</p>
+    <a href="tel:+919650548432" class="btn call">Call Now</a>
+    <a href="https://wa.me/919650548432" class="btn wa">WhatsApp</a>
   </div>
 </section>
 
-<!-- CTA -->
-<div class="cta">
-  <h2>Need Industrial RO Plant in Faridabad?</h2>
-  <p>Call now for pricing, site visit & free consultation</p><br>
-  <a class="btn" href="tel:+919650548432">Call Now</a>
+<!-- CONTENT -->
+<section>
+<h2>Industrial RO Plant Manufacturer in Faridabad</h2>
+<p>
+AquaSurely is a trusted <b>Industrial & Commercial RO Plant supplier in Faridabad</b>,
+providing high-performance reverse osmosis water treatment systems for factories,
+hotels, hospitals, schools and industries.
+</p>
+
+<div class="box">
+<h3>Available RO Plant Capacities</h3>
+<ul>
+<li>500 LPH Industrial RO Plant</li>
+<li>1000 LPH Industrial RO Plant</li>
+<li>2000 LPH Industrial RO Plant</li>
+<li>3000 LPH Industrial RO Plant</li>
+</ul>
 </div>
 
+<div class="box">
+<h3>Our Services in Faridabad</h3>
+<ul>
+<li>RO Plant Installation</li>
+<li>Annual Maintenance Contract (AMC)</li>
+<li>RO Plant Repair & Servicing</li>
+<li>Wholesale RO Plants & Spare Parts</li>
+</ul>
+</div>
+
+<h2>Industrial RO Plants</h2>
+<div class="grid">
+  <div class="card">
+    <img src="ro-500.jpg">
+    <div class="p"><h3>500 LPH RO Plant</h3></div>
+  </div>
+  <div class="card">
+    <img src="ro-1000.jpg">
+    <div class="p"><h3>1000 LPH RO Plant</h3></div>
+  </div>
+  <div class="card">
+    <img src="ro-2000.jpg">
+    <div class="p"><h3>2000 LPH RO Plant</h3></div>
+  </div>
+  <div class="card">
+    <img src="ro-3000.jpg">
+    <div class="p"><h3>3000 LPH RO Plant</h3></div>
+  </div>
+</div>
+</section>
+
 <!-- FOOTER -->
-<footer>
-  <p><b>AquaSurely</b> – Industrial RO Plant Supplier Faridabad</p>
-  <p>📞 +91 9650548432 | ✉️ surelyaqua@gmail.com</p>
+<footer id="contact">
+<p><b>AquaSurely</b> – Industrial RO Plant Supplier Faridabad</p>
+<p>📞 +91 9650548432 | ✉️ surelyaqua@gmail.com</p>
 </footer>
 
 </body>
