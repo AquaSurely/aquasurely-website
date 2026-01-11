@@ -13,7 +13,6 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
 body{background:#f5f7fb;color:#111;line-height:1.5}
 
-/* COLORS / THEME (DrinkPrime-like but AquaSurely brand) */
 :root{
   --primary:#0056ff;
   --primary-dark:#003bcc;
@@ -35,7 +34,7 @@ body{background:#f5f7fb;color:#111;line-height:1.5}
 }
 .top-strip b{font-weight:700}
 
-/* HEADER / NAV */
+/* HEADER */
 header{
   position:sticky;
   top:0;
@@ -88,13 +87,15 @@ nav a:hover{
 }
 .hero-inner{
   max-width:1120px;
-  margin:auto;
+  margin:0 auto;
   padding:30px 16px 40px;
   display:grid;
-  grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
-  gap:26px;
-  align-items:center;
+  grid-template-columns:1.1fr 1.1fr;
+  gap:30px;
+  align-items:flex-start;
 }
+
+/* LEFT SIDE */
 .hero-left small{
   display:inline-flex;
   align-items:center;
@@ -144,9 +145,7 @@ nav a:hover{
   background:rgba(15,23,42,.9);
   border:1px solid rgba(148,163,184,.7);
 }
-.hero-pill span.icon{
-  font-size:15px;
-}
+.hero-pill span.icon{font-size:15px;}
 .hero-cta{
   display:flex;
   flex-wrap:wrap;
@@ -171,27 +170,27 @@ nav a:hover{
   background:var(--primary);
   color:#fff;
 }
-.btn-primary:hover{
-  background:var(--primary-dark);
-}
+.btn-primary:hover{background:var(--primary-dark);}
 .btn-outline{
   background:transparent;
   color:#e5e7eb;
   border:1px solid rgba(148,163,184,.7);
 }
-.btn-outline:hover{
-  background:rgba(15,23,42,.9);
-}
+.btn-outline:hover{background:rgba(15,23,42,.9);}
 .hero-trust{
   font-size:11px;
   color:#9ca3af;
 }
 
+/* RIGHT SIDE WRAPPER (card + form) */
 .hero-right{
-  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
+
+/* DEVICE CARD */
 .hero-card{
-  position:relative;
   background:radial-gradient(circle at top,var(--primary) 0,#020617 55%);
   border-radius:20px;
   padding:18px 18px 20px;
@@ -206,9 +205,7 @@ nav a:hover{
   font-size:12px;
   color:#e5e7eb;
 }
-.hero-card-header b{
-  font-size:14px;
-}
+.hero-card-header b{font-size:14px;}
 .hero-card-chip{
   font-size:10px;
   padding:4px 9px;
@@ -218,7 +215,7 @@ nav a:hover{
 }
 .hero-device{
   width:100%;
-  height:220px;
+  height:200px;
   border-radius:16px;
   background:#020617 url("hero-unit.png") center/cover no-repeat;
   box-shadow:0 16px 40px rgba(15,23,42,.8);
@@ -227,15 +224,61 @@ nav a:hover{
 .hero-card-footer{
   display:flex;
   justify-content:space-between;
-  align-items:center;
+  gap:16px;
   font-size:11px;
   color:#e5e7eb;
 }
-.hero-card-footer span.label{
-  color:#9ca3af;
+.hero-card-footer span.label{color:#9ca3af;}
+.hero-card-footer b{font-size:13px;}
+
+/* FORM CARD INSIDE HERO */
+.hero-form-card{
+  background:#fff;
+  border-radius:18px;
+  padding:20px 18px 18px;
+  box-shadow:0 18px 40px rgba(15,23,42,.45);
+  border:1px solid #e5e7eb;
 }
-.hero-card-footer b{
+.hero-form-card h2{
+  font-size:20px;
+  margin-bottom:4px;
+  color:#111827;
+}
+.hero-form-card p{
   font-size:13px;
+  color:#6b7280;
+  margin-bottom:16px;
+}
+.hero-form-card form input,
+.hero-form-card form textarea{
+  width:100%;
+  padding:11px 10px;
+  margin-bottom:10px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  font-size:13px;
+}
+.hero-form-card form textarea{
+  min-height:80px;
+  resize:vertical;
+}
+.hero-form-card form button{
+  width:100%;
+  padding:11px;
+  border-radius:999px;
+  border:none;
+  font-size:14px;
+  font-weight:600;
+  background:var(--primary);
+  color:#fff;
+  cursor:pointer;
+  transition:.15s;
+}
+.hero-form-card form button:hover{background:var(--primary-dark);}
+.hero-form-note{
+  font-size:11px;
+  color:#9ca3af;
+  margin-top:6px;
 }
 
 /* HIGHLIGHT STRIP */
@@ -258,11 +301,10 @@ nav a:hover{
   align-items:center;
   gap:8px;
 }
-.highlight-item span.icon{
-  font-size:18px;
-}
+.highlight-item span.icon{font-size:18px;}
 
-/* GENERIC SECTION */
+/* GENERIC SECTIONS, PLANS, FAQ, ETC.
+   (same as previous answer, trimmed a bit for brevity) */
 section{
   max-width:1120px;
   margin:26px auto;
@@ -279,7 +321,9 @@ section{
   margin-bottom:18px;
 }
 
-/* 3 COLUMN GRID */
+/* ... (same grid, plans, benefits, faq, service, footer, floating buttons CSS as earlier) */
+
+/* GRID REUSE */
 .grid-3{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -292,16 +336,10 @@ section{
   box-shadow:0 12px 30px rgba(148,163,184,.18);
   border:1px solid rgba(226,232,240,.8);
 }
-.card h3{
-  font-size:16px;
-  margin-bottom:6px;
-}
-.card p{
-  font-size:13px;
-  color:var(--muted);
-}
+.card h3{font-size:16px;margin-bottom:6px;}
+.card p{font-size:13px;color:var(--muted);}
 
-/* PLANS STYLE (for plant capacities) */
+/* PLANS */
 .plans{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -316,9 +354,7 @@ section{
   overflow:hidden;
   box-shadow:0 22px 45px rgba(15,23,42,.5);
 }
-.plan-card.highlight{
-  border:1px solid var(--accent);
-}
+.plan-card.highlight{border:1px solid var(--accent);}
 .plan-tag{
   position:absolute;
   top:10px;
@@ -330,26 +366,10 @@ section{
   color:#e0f2fe;
   border:1px solid rgba(56,189,248,.6);
 }
-.plan-title{
-  font-size:16px;
-  margin-bottom:4px;
-}
-.plan-sub{
-  font-size:12px;
-  color:#9ca3af;
-  margin-bottom:10px;
-}
-.plan-meta{
-  font-size:11px;
-  color:#9ca3af;
-  margin-bottom:10px;
-}
-.plan-meta span{
-  display:inline-flex;
-  align-items:center;
-  gap:4px;
-  margin-right:10px;
-}
+.plan-title{font-size:16px;margin-bottom:4px;}
+.plan-sub{font-size:12px;color:#9ca3af;margin-bottom:10px;}
+.plan-meta{font-size:11px;color:#9ca3af;margin-bottom:10px;}
+.plan-meta span{display:inline-flex;align-items:center;gap:4px;margin-right:10px;}
 .plan-footer{
   display:flex;
   justify-content:space-between;
@@ -390,83 +410,10 @@ section{
   padding:12px 14px;
   border:1px solid #e5e7eb;
 }
-.faq-q{
-  font-size:13px;
-  font-weight:600;
-  margin-bottom:4px;
-}
-.faq-a{
-  font-size:12px;
-  color:var(--muted);
-}
+.faq-q{font-size:13px;font-weight:600;margin-bottom:4px;}
+.faq-a{font-size:12px;color:var(--muted);}
 
-/* FORM / CTA */
-.form-section{
-  display:grid;
-  grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
-  gap:18px;
-  align-items:flex-start;
-}
-.form-card{
-  background:#fff;
-  border-radius:16px;
-  padding:16px;
-  box-shadow:0 16px 40px rgba(148,163,184,.3);
-  border:1px solid #e5e7eb;
-}
-form input,form textarea{
-  width:100%;
-  padding:11px 10px;
-  margin-bottom:10px;
-  border-radius:10px;
-  border:1px solid #d1d5db;
-  font-size:13px;
-}
-form textarea{
-  min-height:80px;
-  resize:vertical;
-}
-form button{
-  width:100%;
-  padding:11px;
-  border-radius:999px;
-  border:none;
-  font-size:14px;
-  font-weight:600;
-  background:var(--primary);
-  color:#fff;
-  cursor:pointer;
-  transition:.15s;
-}
-form button:hover{
-  background:var(--primary-dark);
-}
-.form-note{
-  font-size:11px;
-  color:var(--muted);
-  margin-top:6px;
-}
-
-.form-side{
-  font-size:13px;
-  color:var(--muted);
-}
-.form-side h3{
-  font-size:16px;
-  margin-bottom:6px;
-  color:var(--text);
-}
-.form-side ul{
-  margin-top:6px;
-  list-style:none;
-}
-.form-side li{
-  display:flex;
-  gap:8px;
-  margin-bottom:6px;
-}
-
-/* SERVICE AREAS */
+/* SERVICE AREAS & FOOTER */
 .service-areas{
   background:#020617;
   color:#e5e7eb;
@@ -478,10 +425,7 @@ form button:hover{
   margin:auto;
   padding:0 16px;
 }
-.service-title{
-  font-size:16px;
-  margin-bottom:8px;
-}
+.service-title{font-size:16px;margin-bottom:8px;}
 .service-tags{
   display:flex;
   flex-wrap:wrap;
@@ -496,8 +440,6 @@ form button:hover{
   border:1px solid rgba(148,163,184,.7);
   color:#e5e7eb;
 }
-
-/* FOOTER */
 footer{
   background:#020617;
   color:#9ca3af;
@@ -505,11 +447,9 @@ footer{
   padding:12px 16px 18px;
   font-size:12px;
 }
-footer b{
-  color:#f9fafb;
-}
+footer b{color:#f9fafb;}
 
-/* FLOATING WHATSAPP & CALL */
+/* FLOATING ACTION BUTTONS */
 .floating-actions{
   position:fixed;
   bottom:16px;
@@ -531,25 +471,19 @@ footer b{
   box-shadow:0 12px 30px rgba(15,23,42,.4);
   text-decoration:none;
 }
-.float-wa{
-  background:#25d366;
-}
-.float-call{
-  background:var(--primary);
-}
+.float-wa{background:#25d366;}
+.float-call{background:var(--primary);}
+
+/* RESPONSIVE */
 @media(max-width:880px){
   .hero-inner{
     grid-template-columns:1fr;
-    padding-bottom:30px;
   }
   .hero-right{order:-1;}
-  .form-section{
-    grid-template-columns:1fr;
-  }
 }
 @media(max-width:640px){
   .navbar{padding:10px 12px;}
-  nav{display:none;} /* simple for LP */
+  nav{display:none;}
   .hero h1{font-size:24px;}
   .highlight-inner{
     flex-direction:column;
@@ -586,6 +520,7 @@ footer b{
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-inner">
+    <!-- LEFT -->
     <div class="hero-left">
       <small><span class="badge">Industrial RO</span> 500–3000 LPH plants for factories, hotels, hospitals & more</small>
       <h1>Get a high‑performance <span>Commercial & Industrial RO Plant</span> for your facility in Delhi NCR.</h1>
@@ -607,6 +542,7 @@ footer b{
       </div>
     </div>
 
+    <!-- RIGHT (CARD + FORM) -->
     <div class="hero-right">
       <div class="hero-card">
         <div class="hero-card-header">
@@ -628,6 +564,25 @@ footer b{
           </div>
         </div>
       </div>
+
+      <div class="hero-form-card" id="contact">
+        <h2>Get a free RO plant quotation</h2>
+        <p>Share your requirement and an AquaSurely RO specialist will call you within 24 hours.</p>
+
+        <form action="https://formsubmit.co/surelyaqua@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://aquasurely.in/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="email" name="email" placeholder="Work Email (optional)">
+          <textarea name="requirement" placeholder="Tell us about your requirement (capacity, application, city)"></textarea>
+          <button type="submit">Submit enquiry</button>
+        </form>
+        <div class="hero-form-note">
+          By submitting this form, you agree to be contacted by AquaSurely over phone, WhatsApp or email regarding RO plant solutions.
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -642,7 +597,8 @@ footer b{
   </div>
 </div>
 
-<!-- WHAT WE PROVIDE -->
+<!-- Plants, Why, Testimonials, FAQ, Service areas, Footer (same as earlier) -->
+<!-- PLANTS -->
 <section id="plants">
   <h2 class="section-title">RO Plants for every industrial need</h2>
   <p class="section-sub">Choose from a range of commercial & industrial RO plants, engineered for continuous, reliable operation.</p>
@@ -692,7 +648,7 @@ footer b{
   </div>
 </section>
 
-<!-- WHY CHOOSE AQUASURELY -->
+<!-- WHY US -->
 <section id="why">
   <h2 class="section-title">Why industrial clients choose AquaSurely</h2>
   <p class="section-sub">End‑to‑end RO solutions from design to installation and long‑term maintenance, tailored to your process requirements.</p>
@@ -715,15 +671,15 @@ footer b{
   <div class="grid-3">
     <div class="card">
       <h3>Manufacturing Unit – Faridabad</h3>
-      <p>“Our production line needs reliable process water. AquaSurely’s 2000 LPH plant has been running smoothly with timely service support.”</p>
+      <p>Our production line needs reliable process water. AquaSurely’s 2000 LPH plant has been running smoothly with timely service support.</p>
     </div>
     <div class="card">
       <h3>Hotel – Gurgaon</h3>
-      <p>“Kitchen and guest areas rely on their RO system. The team handles AMC proactively, so we don’t face downtime.”</p>
+      <p>Kitchen and guest areas rely on their RO system. The team handles AMC proactively, so downtime is minimal.</p>
     </div>
     <div class="card">
       <h3>Hospital – Noida</h3>
-      <p>“We needed consistent water quality for critical applications. AquaSurely delivered both design and execution as per our requirement.”</p>
+      <p>We needed consistent water quality for critical applications. AquaSurely delivered both design and execution as per our requirement.</p>
     </div>
   </div>
 </section>
@@ -748,47 +704,6 @@ footer b{
     <div class="faq-item">
       <div class="faq-q">Do you supply outside Delhi NCR?</div>
       <div class="faq-a">Yes, plants can be supplied and supported across India for projects and bulk requirements. For service‑intensive installations, Delhi NCR is prioritized.</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT / ENQUIRY -->
-<section id="contact">
-  <div class="form-section">
-    <div class="form-card">
-      <h2 class="section-title">Get a free RO plant quotation</h2>
-      <p class="section-sub">Share your requirement and an AquaSurely RO specialist will call you within 24 hours.</p>
-
-      <form action="https://formsubmit.co/surelyaqua@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://aquasurely.in/thank-you.html">
-        <input type="hidden" name="_captcha" value="false">
-
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <input type="email" name="email" placeholder="Work Email (optional)">
-        <textarea name="requirement" placeholder="Tell us about your requirement (capacity, application, city)"></textarea>
-        <button type="submit">Submit enquiry</button>
-
-        <div class="form-note">By submitting this form, you agree to be contacted by AquaSurely over phone, WhatsApp or email regarding RO plant solutions.</div>
-      </form>
-    </div>
-
-    <div class="form-side">
-      <h3>Need urgent assistance?</h3>
-      <p>Reach our team directly for quick discussions on feasibility, rough costing and timelines.</p>
-      <ul>
-        <li>📞 <b>+91 9650548432</b> (Call / WhatsApp)</li>
-        <li>✉️ surelyaqua@gmail.com</li>
-        <li>🏭 Commercial & Industrial RO Plant Supplier – India</li>
-      </ul>
-
-      <h3 style="margin-top:14px;">Typical implementation steps</h3>
-      <ul>
-        <li>• Basic requirement discussion & water test (if needed)</li>
-        <li>• Technical proposal & commercial offer</li>
-        <li>• Plant fabrication, delivery & installation</li>
-        <li>• Commissioning, testing & handover with training</li>
-      </ul>
     </div>
   </div>
 </section>
