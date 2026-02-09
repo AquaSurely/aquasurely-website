@@ -46,13 +46,34 @@
             align-items: center;
         }
         
-        .logo h1 {
+        /* New logo container styles */
+        .logo-image {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .logo-image img {
+            height: 50px; /* Adjust based on your logo size */
+            width: auto;
+        }
+        
+        .logo-tagline {
+            font-size: 14px;
+            color: #0c4da2;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        /* Old logo styles - keeping as fallback */
+        .logo-text h1 {
             color: #0c4da2;
             font-size: 28px;
             font-weight: 700;
         }
         
-        .logo span {
+        .logo-text span {
             color: #00a8e8;
             font-weight: 300;
         }
@@ -377,7 +398,14 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <div>
+                <!-- Option 1: If you have the new logo image hosted -->
+                <!-- <div class="logo-image">
+                    <img src="https://your-domain.com/path-to/new-logo.png" alt="AquaSurely - Industrial RO Experts">
+                    <div class="logo-tagline">INDUSTRIAL RO EXPERTS</div>
+                </div> -->
+                
+                <!-- Option 2: Using text as fallback (current setup) -->
+                <div class="logo-text">
                     <h1>Aqua<span>Surely</span></h1>
                     <div class="tagline">INDUSTRIAL RO EXPERTS</div>
                 </div>
