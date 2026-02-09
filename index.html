@@ -46,27 +46,34 @@
             align-items: center;
         }
         
-        /* New logo container styles */
-        .logo-image {
+        /* NEW: Image Logo Container */
+        .logo-image-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
         }
         
-        .logo-image img {
-            height: 50px; /* Adjust based on your logo size */
+        /* NEW: Style for your logo image */
+        .logo-img {
+            height: 60px; /* Adjust based on your logo size */
             width: auto;
+            max-width: 250px;
         }
         
+        /* NEW: Logo tagline style */
         .logo-tagline {
-            font-size: 14px;
+            font-size: 12px;
             color: #0c4da2;
             font-weight: 600;
             letter-spacing: 1px;
             margin-top: 5px;
+            text-align: center;
         }
         
-        /* Old logo styles - keeping as fallback */
+        /* OLD: Text logo styles - HIDING */
+        .logo-text {
+            display: none; /* Hiding the old text logo */
+        }
+        
         .logo-text h1 {
             color: #0c4da2;
             font-size: 28px;
@@ -320,14 +327,20 @@
             margin-bottom: 30px;
         }
         
-        .footer-logo h2 {
-            color: white;
-            font-size: 28px;
-            margin-bottom: 5px;
+        /* NEW: Footer logo as image */
+        .footer-logo-image {
+            margin-bottom: 15px;
         }
         
-        .footer-logo span {
-            color: #00a8e8;
+        .footer-logo-image img {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+        }
+        
+        /* OLD: Footer text logo - HIDING */
+        .footer-logo h2 {
+            display: none; /* Hiding old footer text logo */
         }
         
         .footer-links h3 {
@@ -369,6 +382,10 @@
                 text-align: center;
             }
             
+            .logo-img {
+                height: 50px; /* Smaller on mobile */
+            }
+            
             nav ul {
                 margin-top: 20px;
                 flex-wrap: wrap;
@@ -398,16 +415,20 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <!-- Option 1: If you have the new logo image hosted -->
-                <!-- <div class="logo-image">
-                    <img src="https://your-domain.com/path-to/new-logo.png" alt="AquaSurely - Industrial RO Experts">
-                    <div class="logo-tagline">INDUSTRIAL RO EXPERTS</div>
-                </div> -->
-                
-                <!-- Option 2: Using text as fallback (current setup) -->
+                <!-- OLD TEXT LOGO - HIDDEN -->
                 <div class="logo-text">
                     <h1>Aqua<span>Surely</span></h1>
                     <div class="tagline">INDUSTRIAL RO EXPERTS</div>
+                </div>
+                
+                <!-- NEW IMAGE LOGO -->
+                <div class="logo-image-container">
+                    <!-- REPLACE THE SOURCE BELOW WITH YOUR LOGO IMAGE URL -->
+                    <img src="https://via.placeholder.com/250x60/0c4da2/ffffff?text=AquaSurely+Logo" 
+                         alt="AquaSurely - Industrial RO Experts" 
+                         class="logo-img">
+                    <!-- You can remove the tagline below if it's already in your logo image -->
+                    <div class="logo-tagline">INDUSTRIAL RO EXPERTS</div>
                 </div>
             </div>
             <nav>
@@ -565,7 +586,16 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-logo">
+                    <!-- NEW: Footer image logo -->
+                    <div class="footer-logo-image">
+                        <!-- REPLACE THE SOURCE BELOW WITH YOUR LOGO IMAGE URL -->
+                        <img src="https://via.placeholder.com/200x50/ffffff/0c4da2?text=AquaSurely+Logo" 
+                             alt="AquaSurely - Industrial RO Experts">
+                    </div>
+                    
+                    <!-- OLD: Footer text logo - HIDDEN -->
                     <h2>Aqua<span>Surely</span></h2>
+                    
                     <p>INDUSTRIAL RO EXPERTS</p>
                     <p style="margin-top: 15px; color: #ddd;">Providing high-quality water purification solutions for industries and commercial establishments across Delhi NCR for over a decade.</p>
                 </div>
